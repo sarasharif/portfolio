@@ -18,9 +18,11 @@ view model =
 pageStyle : Attribute Msg
 pageStyle =
     style
-        [ ( "width", "100vw" )
+        [ ( "width", "100%" )
         , ( "height", "100vh" )
         , ( "background-image", "url('img/bg.jpg')" )
+        , ( "background-size", "100% 100%" )
+        , ( "overflow", "hidden" )
         ]
 
 
@@ -46,41 +48,75 @@ navStyle =
 buttonStyle : Attribute msg
 buttonStyle =
     style
-        [ ( "color", "darkgray" )
+        [ ( "color", "white" )
         , ( "height", "90px" )
         , ( "width", "90px" )
         , ( "border", "none" )
-        , ( "text-align", "center" )
-        , ( "align-items", "center" )
-        , ( "margin", "4px" )
+        , ( "margin", "4px 20px" )
         , ( "padding", "0" )
         , ( "background", "none" )
         , ( "text-decoration", "none" )
+        , ( "cursor", "pointer" )
         ]
 
 
 body : Model -> Html Msg
 body model =
     if model == "Home" then
-        div []
+        div [ bodyStyle ]
             [ home ]
     else
-        div []
+        div [ bodyStyle ]
             [ projects ]
+
+
+bodyStyle : Attribute msg
+bodyStyle =
+    style
+        [ ( "display", "flex" )
+        , ( "justify-content", "center" )
+        , ( "width", "100%" )
+        , ( "height", "auto" )
+        ]
 
 
 home : Html Msg
 home =
-    div []
+    div [ contentItemStyle ]
         [ text "HI I'm SARA!!" ]
-
-
-
--- div []
---     [ text "Hi there I'm Sara" ]
 
 
 projects : Html Msg
 projects =
     div []
-        [ text "Worky work" ]
+        [ div
+            [ contentItemStyle ]
+            [ img [ screenshotStyle, src "img/culturemap.png" ] []
+            ]
+        , div
+            [ contentItemStyle ]
+            [ text "xylophone" ]
+        , div
+            [ contentItemStyle ]
+            [ text "wedding!" ]
+        , div
+            [ contentItemStyle ]
+            [ text "connect-4" ]
+        ]
+
+
+contentItemStyle : Attribute msg
+contentItemStyle =
+    style
+        [ ( "background-color", "rgba(255,255,255,.7)" )
+        , ( "width", "50vw" )
+        , ( "margin", "4px" )
+        , ( "padding", "4px" )
+        ]
+
+
+screenshotStyle : Attribute msg
+screenshotStyle =
+    style
+        [ ( "width", "50%" )
+        ]

@@ -4,20 +4,7 @@ import Model exposing (..)
 import View exposing (..)
 import Messages exposing (..)
 import Html exposing (..)
-
-
--- UPDATE
-
-
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    case msg of
-        Home ->
-            ( "Home", Cmd.none )
-
-        Projects ->
-            ( "Projects", Cmd.none )
-
+import Update exposing (..)
 
 
 -- SUBSCRIPTIONS
