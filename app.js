@@ -8261,161 +8261,71 @@ var _user$project$Messages$Home = {ctor: 'Home'};
 
 var _user$project$Model$init = {ctor: '_Tuple2', _0: 'Home', _1: _elm_lang$core$Platform_Cmd$none};
 
-var _user$project$View$screenshotStyle = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'width', _1: '50%'},
-		_1: {ctor: '[]'}
-	});
-var _user$project$View$contentItemStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$Style$contentDescriptionStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
 		_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'rgba(255,255,255,.7)'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'width', _1: '50vw'},
-			_1: {
-				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'margin', _1: '4px'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'padding', _1: '4px'},
-					_1: {ctor: '[]'}
-				}
-			}
+			_0: {ctor: '_Tuple2', _0: 'flex-grow', _1: '2'},
+			_1: {ctor: '[]'}
 		}
 	});
-var _user$project$View$projects = A2(
-	_elm_lang$html$Html$div,
-	{ctor: '[]'},
+var _user$project$Style$contentImageStyle = _elm_lang$html$Html_Attributes$style(
+	{ctor: '[]'});
+var _user$project$Style$contentItemStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$div,
-			{
+		_0: {ctor: '_Tuple2', _0: 'width', _1: '70vw'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'height', _1: 'auto'},
+			_1: {
 				ctor: '::',
-				_0: _user$project$View$contentItemStyle,
-				_1: {ctor: '[]'}
-			},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$img,
-					{
+				_0: {ctor: '_Tuple2', _0: 'margin', _1: '10px'},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'padding', _1: '0'},
+					_1: {
 						ctor: '::',
-						_0: _user$project$View$screenshotStyle,
+						_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$src('img/culturemap.png'),
+							_0: {ctor: '_Tuple2', _0: 'flex-direction', _1: 'row'},
 							_1: {ctor: '[]'}
 						}
-					},
-					{ctor: '[]'}),
-				_1: {ctor: '[]'}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$div,
-				{
-					ctor: '::',
-					_0: _user$project$View$contentItemStyle,
-					_1: {ctor: '[]'}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text('xylophone'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$div,
-					{
-						ctor: '::',
-						_0: _user$project$View$contentItemStyle,
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('wedding!'),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$div,
-						{
-							ctor: '::',
-							_0: _user$project$View$contentItemStyle,
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('connect-4'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {ctor: '[]'}
+					}
 				}
 			}
 		}
 	});
-var _user$project$View$home = A2(
-	_elm_lang$html$Html$div,
+var _user$project$Style$bodyStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
-		_0: _user$project$View$contentItemStyle,
-		_1: {ctor: '[]'}
-	},
-	{
-		ctor: '::',
-		_0: _elm_lang$html$Html$text('HI I\'m SARA!!'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$View$bodyStyle = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+		_0: {ctor: '_Tuple2', _0: 'position', _1: 'relative'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+			_0: {ctor: '_Tuple2', _0: 'top', _1: '20vh'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+				_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'height', _1: 'auto'},
-					_1: {ctor: '[]'}
+					_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'height', _1: 'auto'},
+							_1: {ctor: '[]'}
+						}
+					}
 				}
 			}
 		}
 	});
-var _user$project$View$body = function (model) {
-	return _elm_lang$core$Native_Utils.eq(model, 'Home') ? A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _user$project$View$bodyStyle,
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: _user$project$View$home,
-			_1: {ctor: '[]'}
-		}) : A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _user$project$View$bodyStyle,
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: _user$project$View$projects,
-			_1: {ctor: '[]'}
-		});
-};
-var _user$project$View$buttonStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$Style$buttonStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
 		_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
@@ -8453,25 +8363,276 @@ var _user$project$View$buttonStyle = _elm_lang$html$Html_Attributes$style(
 			}
 		}
 	});
-var _user$project$View$navStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$Style$navStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+		_0: {ctor: '_Tuple2', _0: 'position', _1: 'relative'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+			_0: {ctor: '_Tuple2', _0: 'top', _1: '20vh'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
-				_1: {ctor: '[]'}
+				_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'margin-bottom', _1: '15px'},
+							_1: {ctor: '[]'}
+						}
+					}
+				}
 			}
 		}
 	});
+
+var _user$project$View$projects = A2(
+	_elm_lang$html$Html$div,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _user$project$Style$contentItemStyle,
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$img,
+					{
+						ctor: '::',
+						_0: _user$project$Style$contentImageStyle,
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$src('img/culturemap.png'),
+							_1: {ctor: '[]'}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _user$project$Style$contentDescriptionStyle,
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('culturemap'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _user$project$Style$contentItemStyle,
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$img,
+						{
+							ctor: '::',
+							_0: _user$project$Style$contentImageStyle,
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$src('img/xylophone.gif'),
+								_1: {ctor: '[]'}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _user$project$Style$contentDescriptionStyle,
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('xylophone'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _user$project$Style$contentItemStyle,
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$img,
+							{
+								ctor: '::',
+								_0: _user$project$Style$contentImageStyle,
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$src('img/wedding.png'),
+									_1: {ctor: '[]'}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$div,
+								{
+									ctor: '::',
+									_0: _user$project$Style$contentDescriptionStyle,
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('wedding'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _user$project$Style$contentItemStyle,
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$img,
+								{
+									ctor: '::',
+									_0: _user$project$Style$contentImageStyle,
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$src('img/connect4.gif'),
+										_1: {ctor: '[]'}
+									}
+								},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$div,
+									{
+										ctor: '::',
+										_0: _user$project$Style$contentDescriptionStyle,
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('connect4'),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	});
+var _user$project$View$home = A2(
+	_elm_lang$html$Html$div,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _user$project$Style$contentItemStyle,
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$img,
+					{
+						ctor: '::',
+						_0: _user$project$Style$contentImageStyle,
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$src('img/sara.jpg'),
+							_1: {ctor: '[]'}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _user$project$Style$contentDescriptionStyle,
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Sara Sharif'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _user$project$View$body = function (model) {
+	return _elm_lang$core$Native_Utils.eq(model, 'Home') ? A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Style$bodyStyle,
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: _user$project$View$home,
+			_1: {ctor: '[]'}
+		}) : A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Style$bodyStyle,
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: _user$project$View$projects,
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$View$nav = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
-		_0: _user$project$View$navStyle,
+		_0: _user$project$Style$navStyle,
 		_1: {ctor: '[]'}
 	},
 	{
@@ -8480,7 +8641,7 @@ var _user$project$View$nav = A2(
 			_elm_lang$html$Html$button,
 			{
 				ctor: '::',
-				_0: _user$project$View$buttonStyle,
+				_0: _user$project$Style$buttonStyle,
 				_1: {
 					ctor: '::',
 					_0: _elm_lang$html$Html_Events$onClick(_user$project$Messages$Home),
@@ -8498,7 +8659,7 @@ var _user$project$View$nav = A2(
 				_elm_lang$html$Html$button,
 				{
 					ctor: '::',
-					_0: _user$project$View$buttonStyle,
+					_0: _user$project$Style$buttonStyle,
 					_1: {
 						ctor: '::',
 						_0: _elm_lang$html$Html_Events$onClick(_user$project$Messages$Projects),
@@ -8516,7 +8677,7 @@ var _user$project$View$nav = A2(
 					_elm_lang$html$Html$a,
 					{
 						ctor: '::',
-						_0: _user$project$View$buttonStyle,
+						_0: _user$project$Style$buttonStyle,
 						_1: {
 							ctor: '::',
 							_0: _elm_lang$html$Html_Attributes$target('_blank'),
@@ -8538,7 +8699,7 @@ var _user$project$View$nav = A2(
 						_elm_lang$html$Html$a,
 						{
 							ctor: '::',
-							_0: _user$project$View$buttonStyle,
+							_0: _user$project$Style$buttonStyle,
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$html$Html_Attributes$target('_blank'),
@@ -8559,36 +8720,10 @@ var _user$project$View$nav = A2(
 			}
 		}
 	});
-var _user$project$View$pageStyle = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
-		_1: {
-			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'height', _1: '100vh'},
-			_1: {
-				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'background-image', _1: 'url(\'img/bg.jpg\')'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'background-size', _1: '100% 100%'},
-					_1: {
-						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'overflow', _1: 'hidden'},
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		}
-	});
 var _user$project$View$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _user$project$View$pageStyle,
-			_1: {ctor: '[]'}
-		},
+		{ctor: '[]'},
 		{
 			ctor: '::',
 			_0: _user$project$View$nav,

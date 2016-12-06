@@ -5,24 +5,14 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Model exposing (..)
 import Messages exposing (..)
+import Style exposing (..)
 
 
 view : Model -> Html Msg
 view model =
-    div [ pageStyle ]
+    div []
         [ nav
         , body model
-        ]
-
-
-pageStyle : Attribute Msg
-pageStyle =
-    style
-        [ ( "width", "100%" )
-        , ( "height", "100vh" )
-        , ( "background-image", "url('img/bg.jpg')" )
-        , ( "background-size", "100% 100%" )
-        , ( "overflow", "hidden" )
         ]
 
 
@@ -36,30 +26,6 @@ nav =
         ]
 
 
-navStyle : Attribute msg
-navStyle =
-    style
-        [ ( "display", "flex" )
-        , ( "justify-content", "center" )
-        , ( "width", "100%" )
-        ]
-
-
-buttonStyle : Attribute msg
-buttonStyle =
-    style
-        [ ( "color", "white" )
-        , ( "height", "90px" )
-        , ( "width", "90px" )
-        , ( "border", "none" )
-        , ( "margin", "4px 20px" )
-        , ( "padding", "0" )
-        , ( "background", "none" )
-        , ( "text-decoration", "none" )
-        , ( "cursor", "pointer" )
-        ]
-
-
 body : Model -> Html Msg
 body model =
     if model == "Home" then
@@ -70,20 +36,15 @@ body model =
             [ projects ]
 
 
-bodyStyle : Attribute msg
-bodyStyle =
-    style
-        [ ( "display", "flex" )
-        , ( "justify-content", "center" )
-        , ( "width", "100%" )
-        , ( "height", "auto" )
-        ]
-
-
 home : Html Msg
 home =
-    div [ contentItemStyle ]
-        [ text "HI I'm SARA!!" ]
+    div []
+        [ div
+            [ contentItemStyle ]
+            [ img [ contentImageStyle, src "img/sara.jpg" ] []
+            , div [ contentDescriptionStyle ] [ text "Sara Sharif" ]
+            ]
+        ]
 
 
 projects : Html Msg
@@ -91,32 +52,22 @@ projects =
     div []
         [ div
             [ contentItemStyle ]
-            [ img [ screenshotStyle, src "img/culturemap.png" ] []
+            [ img [ contentImageStyle, src "img/culturemap.png" ] []
+            , div [ contentDescriptionStyle ] [ text "culturemap" ]
             ]
         , div
             [ contentItemStyle ]
-            [ text "xylophone" ]
+            [ img [ contentImageStyle, src "img/xylophone.gif" ] []
+            , div [ contentDescriptionStyle ] [ text "xylophone" ]
+            ]
         , div
             [ contentItemStyle ]
-            [ text "wedding!" ]
+            [ img [ contentImageStyle, src "img/wedding.png" ] []
+            , div [ contentDescriptionStyle ] [ text "wedding" ]
+            ]
         , div
             [ contentItemStyle ]
-            [ text "connect-4" ]
-        ]
-
-
-contentItemStyle : Attribute msg
-contentItemStyle =
-    style
-        [ ( "background-color", "rgba(255,255,255,.7)" )
-        , ( "width", "50vw" )
-        , ( "margin", "4px" )
-        , ( "padding", "4px" )
-        ]
-
-
-screenshotStyle : Attribute msg
-screenshotStyle =
-    style
-        [ ( "width", "50%" )
+            [ img [ contentImageStyle, src "img/connect4.gif" ] []
+            , div [ contentDescriptionStyle ] [ text "connect4" ]
+            ]
         ]
