@@ -39,10 +39,12 @@ body model =
 home : Html Msg
 home =
     div []
-        [ div
-            [ contentItemStyle ]
-            [ img [ contentImageStyle, src "img/sara.jpg" ] []
-            , div [ contentDescriptionStyle ] [ text "Sara Sharif" ]
+        [ div [ contentItemStyle ]
+            [ div [ profileDescriptionStyle ]
+                [ h1 [] [ text "Sara Sharif" ]
+                , h2 [] [ text "Engineer" ]
+                ]
+            , img [ profileImageStyle, src "img/sara.jpg" ] []
             ]
         ]
 

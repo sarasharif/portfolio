@@ -8,7 +8,7 @@ navStyle : Attribute msg
 navStyle =
     style
         [ ( "position", "relative" )
-        , ( "top", "20vh" )
+        , ( "top", "10vh" )
         , ( "display", "flex" )
         , ( "justify-content", "center" )
         , ( "width", "100%" )
@@ -35,11 +35,10 @@ bodyStyle : Attribute msg
 bodyStyle =
     style
         [ ( "position", "relative" )
-        , ( "top", "20vh" )
+        , ( "top", "10vh" )
         , ( "display", "flex" )
         , ( "justify-content", "center" )
         , ( "width", "100%" )
-        , ( "height", "auto" )
         ]
 
 
@@ -47,7 +46,6 @@ contentItemStyle : Attribute msg
 contentItemStyle =
     style
         [ ( "width", "70vw" )
-        , ( "height", "auto" )
         , ( "margin", "10px" )
         , ( "padding", "0" )
         , ( "display", "flex" )
@@ -55,15 +53,33 @@ contentItemStyle =
         ]
 
 
+profileImageStyle : Attribute msg
+profileImageStyle =
+    style
+        [ ( "height", "50vh" ) ]
+
+
+profileDescriptionStyle : Attribute msg
+profileDescriptionStyle =
+    style
+        [ ( "background-color", "rgba(255,255,255,.7)" )
+        , ( "flex-grow", "4" )
+        , ( "vertical-align", "baseline" )
+        , ( "padding", "10% 5%" )
+        ]
+
+
 contentImageStyle : Attribute msg
 contentImageStyle =
     style
-        []
+        [ ( "width", "25vw" )
+        , ( "height", "15vw" )
+        ]
 
 
 contentDescriptionStyle : Attribute msg
 contentDescriptionStyle =
     style
         [ ( "background-color", "rgba(255,255,255,.7)" )
-        , ( "flex-grow", "2" )
+        , ( "flex-grow", "4" )
         ]
