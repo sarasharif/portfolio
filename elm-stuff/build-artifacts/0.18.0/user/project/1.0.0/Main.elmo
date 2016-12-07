@@ -81,24 +81,35 @@ var _user$project$Main$home = A2(
 					{
 						ctor: '::',
 						_0: A2(
-							_elm_lang$html$Html$h1,
+							_elm_lang$html$Html$h2,
 							{ctor: '[]'},
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('Sara Sharif'),
+								_0: _elm_lang$html$Html$text('Sara'),
 								_1: {ctor: '[]'}
 							}),
 						_1: {
 							ctor: '::',
 							_0: A2(
-								_elm_lang$html$Html$h2,
+								_elm_lang$html$Html$h1,
 								{ctor: '[]'},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('Engineer'),
+									_0: _elm_lang$html$Html$text('Sharif'),
 									_1: {ctor: '[]'}
 								}),
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$h2,
+									{ctor: '[]'},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Engineer'),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
 						}
 					}),
 				_1: {
@@ -150,10 +161,6 @@ var _user$project$Main$Model = F2(
 	function (a, b) {
 		return {page: a, selected_project: b};
 	});
-var _user$project$Main$Project = F5(
-	function (a, b, c, d, e) {
-		return {name: a, image_link: b, url: c, description: d, tech: e};
-	});
 var _user$project$Main$Details = function (a) {
 	return {ctor: 'Details', _0: a};
 };
@@ -187,6 +194,12 @@ var _user$project$Main$projectItem = F2(
 			});
 	});
 var _user$project$Main$projects = function (selected_project) {
+	var project_list = A2(
+		_elm_lang$core$List$map,
+		function (project) {
+			return A2(_user$project$Main$projectItem, selected_project, project);
+		},
+		_user$project$Projects$my_projects);
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -194,23 +207,7 @@ var _user$project$Main$projects = function (selected_project) {
 			_0: _user$project$Style$projectParentStyle,
 			_1: {ctor: '[]'}
 		},
-		{
-			ctor: '::',
-			_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$culturemap),
-			_1: {
-				ctor: '::',
-				_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$wedding),
-				_1: {
-					ctor: '::',
-					_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$connect4),
-					_1: {
-						ctor: '::',
-						_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$xylophone),
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		});
+		project_list);
 };
 var _user$project$Main$body = function (model) {
 	return _elm_lang$core$Native_Utils.eq(model.page, 'Home') ? A2(

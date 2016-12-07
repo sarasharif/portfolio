@@ -50,7 +50,8 @@ xylophone =
     }
 
 
-projects =
+my_projects : List Project
+my_projects =
     [ culturemap
     , connect4
     , wedding

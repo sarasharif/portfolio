@@ -8271,10 +8271,10 @@ var _user$project$Style$projectDescriptionStyle = F2(
 						_0: {ctor: '_Tuple2', _0: 'top', _1: '0px'},
 						_1: {
 							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'height', _1: '486px'},
+							_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
 							_1: {
 								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'width', _1: '640px'},
+								_0: {ctor: '_Tuple2', _0: 'height', _1: '100%'},
 								_1: {
 									ctor: '::',
 									_0: {ctor: '_Tuple2', _0: 'z-index', _1: zindex},
@@ -8296,16 +8296,8 @@ var _user$project$Style$projectImageStyle = _elm_lang$html$Html_Attributes$style
 		_0: {ctor: '_Tuple2', _0: 'position', _1: 'relative'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'width', _1: '640px'},
-			_1: {
-				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'height', _1: '486px'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'z-index', _1: '50'},
-					_1: {ctor: '[]'}
-				}
-			}
+			_0: {ctor: '_Tuple2', _0: 'z-index', _1: '50'},
+			_1: {ctor: '[]'}
 		}
 	});
 var _user$project$Style$projectItemStyle = _elm_lang$html$Html_Attributes$style(
@@ -8335,12 +8327,8 @@ var _user$project$Style$projectParentStyle = _elm_lang$html$Html_Attributes$styl
 			_0: {ctor: '_Tuple2', _0: 'flex-wrap', _1: 'wrap'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'width', _1: '1400px'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
-					_1: {ctor: '[]'}
-				}
+				_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+				_1: {ctor: '[]'}
 			}
 		}
 	});
@@ -8353,17 +8341,21 @@ var _user$project$Style$profileDescriptionStyle = _elm_lang$html$Html_Attributes
 			_0: {ctor: '_Tuple2', _0: 'flex-grow', _1: '4'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'vertical-align', _1: 'baseline'},
+				_0: {ctor: '_Tuple2', _0: 'mid-width', _1: '30vw'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'font-size', _1: '2em'},
+					_0: {ctor: '_Tuple2', _0: 'vertical-align', _1: 'baseline'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'padding', _1: '10% 5%'},
+						_0: {ctor: '_Tuple2', _0: 'font-size', _1: '2em'},
 						_1: {
 							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'line-height', _1: '30px'},
-							_1: {ctor: '[]'}
+							_0: {ctor: '_Tuple2', _0: 'padding', _1: '10% 5%'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'line-height', _1: '30px'},
+								_1: {ctor: '[]'}
+							}
 						}
 					}
 				}
@@ -8379,19 +8371,19 @@ var _user$project$Style$profileImageStyle = _elm_lang$html$Html_Attributes$style
 var _user$project$Style$profileStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'width', _1: '70vw'},
+		_0: {ctor: '_Tuple2', _0: 'margin', _1: '10px'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'margin', _1: '10px'},
+			_0: {ctor: '_Tuple2', _0: 'padding', _1: '0'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'padding', _1: '0'},
+				_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+					_0: {ctor: '_Tuple2', _0: 'flex-direction', _1: 'row'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'flex-direction', _1: 'row'},
+						_0: {ctor: '_Tuple2', _0: 'width', _1: '60vw'},
 						_1: {ctor: '[]'}
 					}
 				}
@@ -8407,13 +8399,13 @@ var _user$project$Style$bodyStyle = _elm_lang$html$Html_Attributes$style(
 			_0: {ctor: '_Tuple2', _0: 'top', _1: '10vh'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+				_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+					_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+						_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
 						_1: {ctor: '[]'}
 					}
 				}
@@ -8565,7 +8557,7 @@ var _user$project$Projects$culturemap = {
 		}
 	}
 };
-var _user$project$Projects$projects = {
+var _user$project$Projects$my_projects = {
 	ctor: '::',
 	_0: _user$project$Projects$culturemap,
 	_1: {
@@ -8670,24 +8662,35 @@ var _user$project$Main$home = A2(
 					{
 						ctor: '::',
 						_0: A2(
-							_elm_lang$html$Html$h1,
+							_elm_lang$html$Html$h2,
 							{ctor: '[]'},
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('Sara Sharif'),
+								_0: _elm_lang$html$Html$text('Sara'),
 								_1: {ctor: '[]'}
 							}),
 						_1: {
 							ctor: '::',
 							_0: A2(
-								_elm_lang$html$Html$h2,
+								_elm_lang$html$Html$h1,
 								{ctor: '[]'},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('Engineer'),
+									_0: _elm_lang$html$Html$text('Sharif'),
 									_1: {ctor: '[]'}
 								}),
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$h2,
+									{ctor: '[]'},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Engineer'),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
 						}
 					}),
 				_1: {
@@ -8739,10 +8742,6 @@ var _user$project$Main$Model = F2(
 	function (a, b) {
 		return {page: a, selected_project: b};
 	});
-var _user$project$Main$Project = F5(
-	function (a, b, c, d, e) {
-		return {name: a, image_link: b, url: c, description: d, tech: e};
-	});
 var _user$project$Main$Details = function (a) {
 	return {ctor: 'Details', _0: a};
 };
@@ -8776,6 +8775,12 @@ var _user$project$Main$projectItem = F2(
 			});
 	});
 var _user$project$Main$projects = function (selected_project) {
+	var project_list = A2(
+		_elm_lang$core$List$map,
+		function (project) {
+			return A2(_user$project$Main$projectItem, selected_project, project);
+		},
+		_user$project$Projects$my_projects);
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -8783,23 +8788,7 @@ var _user$project$Main$projects = function (selected_project) {
 			_0: _user$project$Style$projectParentStyle,
 			_1: {ctor: '[]'}
 		},
-		{
-			ctor: '::',
-			_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$culturemap),
-			_1: {
-				ctor: '::',
-				_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$wedding),
-				_1: {
-					ctor: '::',
-					_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$connect4),
-					_1: {
-						ctor: '::',
-						_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$xylophone),
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		});
+		project_list);
 };
 var _user$project$Main$body = function (model) {
 	return _elm_lang$core$Native_Utils.eq(model.page, 'Home') ? A2(

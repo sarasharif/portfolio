@@ -78,7 +78,7 @@ var _user$project$Projects$culturemap = {
 		}
 	}
 };
-var _user$project$Projects$projects = {
+var _user$project$Projects$my_projects = {
 	ctor: '::',
 	_0: _user$project$Projects$culturemap,
 	_1: {

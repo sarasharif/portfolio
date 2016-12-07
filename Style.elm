@@ -39,20 +39,20 @@ bodyStyle =
     style
         [ ( "position", "relative" )
         , ( "top", "10vh" )
+        , ( "width", "100%" )
         , ( "display", "flex" )
         , ( "justify-content", "center" )
-        , ( "width", "100%" )
         ]
 
 
 profileStyle : Attribute msg
 profileStyle =
     style
-        [ ( "width", "70vw" )
-        , ( "margin", "10px" )
+        [ ( "margin", "10px" )
         , ( "padding", "0" )
         , ( "display", "flex" )
         , ( "flex-direction", "row" )
+        , ( "width", "60vw" )
         ]
 
 
@@ -67,6 +67,7 @@ profileDescriptionStyle =
     style
         [ ( "background-color", "rgba(255,255,255,.6)" )
         , ( "flex-grow", "4" )
+        , ( "mid-width", "30vw" )
         , ( "vertical-align", "baseline" )
         , ( "font-size", "2em" )
         , ( "padding", "10% 5%" )
@@ -79,7 +80,6 @@ projectParentStyle =
     style
         [ ( "display", "flex" )
         , ( "flex-wrap", "wrap" )
-        , ( "width", "1400px" )
         , ( "justify-content", "center" )
         ]
 
@@ -98,8 +98,6 @@ projectImageStyle : Attribute msg
 projectImageStyle =
     style
         [ ( "position", "relative" )
-        , ( "width", "640px" )
-        , ( "height", "486px" )
         , ( "z-index", "50" )
         ]
 
@@ -117,8 +115,8 @@ projectDescriptionStyle model match =
             [ ( "background-color", "rgba(5,5,5,.7)" )
             , ( "position", "absolute" )
             , ( "top", "0px" )
-            , ( "height", "486px" )
-            , ( "width", "640px" )
+            , ( "width", "100%" )
+            , ( "height", "100%" )
             , ( "z-index", (zindex) )
             , ( "text-align", "center" )
             ]

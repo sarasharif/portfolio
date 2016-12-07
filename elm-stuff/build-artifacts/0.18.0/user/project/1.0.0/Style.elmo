@@ -13,10 +13,10 @@ var _user$project$Style$projectDescriptionStyle = F2(
 						_0: {ctor: '_Tuple2', _0: 'top', _1: '0px'},
 						_1: {
 							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'height', _1: '486px'},
+							_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
 							_1: {
 								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'width', _1: '640px'},
+								_0: {ctor: '_Tuple2', _0: 'height', _1: '100%'},
 								_1: {
 									ctor: '::',
 									_0: {ctor: '_Tuple2', _0: 'z-index', _1: zindex},
@@ -38,16 +38,8 @@ var _user$project$Style$projectImageStyle = _elm_lang$html$Html_Attributes$style
 		_0: {ctor: '_Tuple2', _0: 'position', _1: 'relative'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'width', _1: '640px'},
-			_1: {
-				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'height', _1: '486px'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'z-index', _1: '50'},
-					_1: {ctor: '[]'}
-				}
-			}
+			_0: {ctor: '_Tuple2', _0: 'z-index', _1: '50'},
+			_1: {ctor: '[]'}
 		}
 	});
 var _user$project$Style$projectItemStyle = _elm_lang$html$Html_Attributes$style(
@@ -77,12 +69,8 @@ var _user$project$Style$projectParentStyle = _elm_lang$html$Html_Attributes$styl
 			_0: {ctor: '_Tuple2', _0: 'flex-wrap', _1: 'wrap'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'width', _1: '1400px'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
-					_1: {ctor: '[]'}
-				}
+				_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+				_1: {ctor: '[]'}
 			}
 		}
 	});
@@ -95,17 +83,21 @@ var _user$project$Style$profileDescriptionStyle = _elm_lang$html$Html_Attributes
 			_0: {ctor: '_Tuple2', _0: 'flex-grow', _1: '4'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'vertical-align', _1: 'baseline'},
+				_0: {ctor: '_Tuple2', _0: 'mid-width', _1: '30vw'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'font-size', _1: '2em'},
+					_0: {ctor: '_Tuple2', _0: 'vertical-align', _1: 'baseline'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'padding', _1: '10% 5%'},
+						_0: {ctor: '_Tuple2', _0: 'font-size', _1: '2em'},
 						_1: {
 							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'line-height', _1: '30px'},
-							_1: {ctor: '[]'}
+							_0: {ctor: '_Tuple2', _0: 'padding', _1: '10% 5%'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'line-height', _1: '30px'},
+								_1: {ctor: '[]'}
+							}
 						}
 					}
 				}
@@ -121,19 +113,19 @@ var _user$project$Style$profileImageStyle = _elm_lang$html$Html_Attributes$style
 var _user$project$Style$profileStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'width', _1: '70vw'},
+		_0: {ctor: '_Tuple2', _0: 'margin', _1: '10px'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'margin', _1: '10px'},
+			_0: {ctor: '_Tuple2', _0: 'padding', _1: '0'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'padding', _1: '0'},
+				_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+					_0: {ctor: '_Tuple2', _0: 'flex-direction', _1: 'row'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'flex-direction', _1: 'row'},
+						_0: {ctor: '_Tuple2', _0: 'width', _1: '60vw'},
 						_1: {ctor: '[]'}
 					}
 				}
@@ -149,13 +141,13 @@ var _user$project$Style$bodyStyle = _elm_lang$html$Html_Attributes$style(
 			_0: {ctor: '_Tuple2', _0: 'top', _1: '10vh'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+				_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+					_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+						_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
 						_1: {ctor: '[]'}
 					}
 				}

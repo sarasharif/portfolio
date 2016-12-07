@@ -27,15 +27,6 @@ type alias Model =
     }
 
 
-type alias Project =
-    { name : String
-    , image_link : String
-    , url : String
-    , description : String
-    , tech : List String
-    }
-
-
 initModel : Model
 initModel =
     { page = "Home"
@@ -108,7 +99,8 @@ home =
     div []
         [ div [ profileStyle ]
             [ div [ profileDescriptionStyle ]
-                [ h1 [] [ text "Sara Sharif" ]
+                [ h2 [] [ text "Sara" ]
+                , h1 [] [ text "Sharif" ]
                 , h2 [] [ text "Engineer" ]
                 ]
             , img [ profileImageStyle, src "img/sara.jpg" ] []
@@ -118,13 +110,13 @@ home =
 
 projects : String -> Html Msg
 projects selected_project =
-    div
-        [ projectParentStyle ]
-        [ projectItem selected_project culturemap
-        , projectItem selected_project wedding
-        , projectItem selected_project connect4
-        , projectItem selected_project xylophone
-        ]
+    let
+        project_list =
+            List.map (\project -> projectItem selected_project project) my_projects
+    in
+        div
+            [ projectParentStyle ]
+            project_list
 
 
 projectItem : String -> Project -> Html Msg
