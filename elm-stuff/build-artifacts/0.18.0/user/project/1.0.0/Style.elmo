@@ -1,4 +1,4 @@
-var _user$project$Style$contentDescriptionStyle = F2(
+var _user$project$Style$projectDescriptionStyle = F2(
 	function (model, match) {
 		var zindex = _elm_lang$core$Native_Utils.eq(model, match) ? '100' : '-100';
 		return _elm_lang$html$Html_Attributes$style(
@@ -20,7 +20,11 @@ var _user$project$Style$contentDescriptionStyle = F2(
 								_1: {
 									ctor: '::',
 									_0: {ctor: '_Tuple2', _0: 'z-index', _1: zindex},
-									_1: {ctor: '[]'}
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
+										_1: {ctor: '[]'}
+									}
 								}
 							}
 						}
@@ -28,7 +32,7 @@ var _user$project$Style$contentDescriptionStyle = F2(
 				}
 			});
 	});
-var _user$project$Style$contentImageStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$Style$projectImageStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
 		_0: {ctor: '_Tuple2', _0: 'position', _1: 'relative'},
@@ -46,7 +50,7 @@ var _user$project$Style$contentImageStyle = _elm_lang$html$Html_Attributes$style
 			}
 		}
 	});
-var _user$project$Style$contentItemStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$Style$projectItemStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
 		_0: {ctor: '_Tuple2', _0: 'position', _1: 'relative'},
@@ -64,7 +68,7 @@ var _user$project$Style$contentItemStyle = _elm_lang$html$Html_Attributes$style(
 			}
 		}
 	});
-var _user$project$Style$contentParentStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$Style$projectParentStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
 		_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},

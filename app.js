@@ -8256,7 +8256,7 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
-var _user$project$Style$contentDescriptionStyle = F2(
+var _user$project$Style$projectDescriptionStyle = F2(
 	function (model, match) {
 		var zindex = _elm_lang$core$Native_Utils.eq(model, match) ? '100' : '-100';
 		return _elm_lang$html$Html_Attributes$style(
@@ -8278,7 +8278,11 @@ var _user$project$Style$contentDescriptionStyle = F2(
 								_1: {
 									ctor: '::',
 									_0: {ctor: '_Tuple2', _0: 'z-index', _1: zindex},
-									_1: {ctor: '[]'}
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
+										_1: {ctor: '[]'}
+									}
 								}
 							}
 						}
@@ -8286,7 +8290,7 @@ var _user$project$Style$contentDescriptionStyle = F2(
 				}
 			});
 	});
-var _user$project$Style$contentImageStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$Style$projectImageStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
 		_0: {ctor: '_Tuple2', _0: 'position', _1: 'relative'},
@@ -8304,7 +8308,7 @@ var _user$project$Style$contentImageStyle = _elm_lang$html$Html_Attributes$style
 			}
 		}
 	});
-var _user$project$Style$contentItemStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$Style$projectItemStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
 		_0: {ctor: '_Tuple2', _0: 'position', _1: 'relative'},
@@ -8322,7 +8326,7 @@ var _user$project$Style$contentItemStyle = _elm_lang$html$Html_Attributes$style(
 			}
 		}
 	});
-var _user$project$Style$contentParentStyle = _elm_lang$html$Html_Attributes$style(
+var _user$project$Style$projectParentStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
 		_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
@@ -8583,11 +8587,15 @@ var _user$project$Projects$Project = F5(
 		return {name: a, image_link: b, url: c, description: d, tech: e};
 	});
 
-var _user$project$Main$hoverdiv = F3(
-	function (name, skills, url) {
+var _user$project$Main$projectDetails = F2(
+	function (selected_project, project) {
 		return A2(
 			_elm_lang$html$Html$div,
-			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: A2(_user$project$Style$projectDescriptionStyle, selected_project, project.name),
+				_1: {ctor: '[]'}
+			},
 			{
 				ctor: '::',
 				_0: A2(
@@ -8595,7 +8603,7 @@ var _user$project$Main$hoverdiv = F3(
 					{ctor: '[]'},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(name),
+						_0: _elm_lang$html$Html$text(project.name),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
@@ -8604,11 +8612,15 @@ var _user$project$Main$hoverdiv = F3(
 						_elm_lang$html$Html$a,
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$target('_blank'),
+							_0: _user$project$Style$buttonStyle,
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$href(url),
-								_1: {ctor: '[]'}
+								_0: _elm_lang$html$Html_Attributes$target('_blank'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$href(project.url),
+									_1: {ctor: '[]'}
+								}
 							}
 						},
 						{
@@ -8620,6 +8632,20 @@ var _user$project$Main$hoverdiv = F3(
 				}
 			});
 	});
+var _user$project$Main$projectImage = function (project) {
+	return A2(
+		_elm_lang$html$Html$img,
+		{
+			ctor: '::',
+			_0: _user$project$Style$projectImageStyle,
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$src(project.image_link),
+				_1: {ctor: '[]'}
+			}
+		},
+		{ctor: '[]'});
+};
 var _user$project$Main$home = A2(
 	_elm_lang$html$Html$div,
 	{ctor: '[]'},
@@ -8683,40 +8709,55 @@ var _user$project$Main$home = A2(
 			}),
 		_1: {ctor: '[]'}
 	});
+var _user$project$Main$initModel = {page: 'Home', selected_project: ''};
+var _user$project$Main$init = {ctor: '_Tuple2', _0: _user$project$Main$initModel, _1: _elm_lang$core$Platform_Cmd$none};
 var _user$project$Main$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		switch (_p0.ctor) {
 			case 'Home':
-				return {ctor: '_Tuple2', _0: 'Home', _1: _elm_lang$core$Platform_Cmd$none};
+				return {ctor: '_Tuple2', _0: _user$project$Main$initModel, _1: _elm_lang$core$Platform_Cmd$none};
 			case 'Projects':
-				return {ctor: '_Tuple2', _0: 'Projects', _1: _elm_lang$core$Platform_Cmd$none};
-			case 'Culturemap':
-				return {ctor: '_Tuple2', _0: 'Culturemap', _1: _elm_lang$core$Platform_Cmd$none};
-			case 'Wedding':
-				return {ctor: '_Tuple2', _0: 'Wedding', _1: _elm_lang$core$Platform_Cmd$none};
-			case 'Connect4':
-				return {ctor: '_Tuple2', _0: 'Connect4', _1: _elm_lang$core$Platform_Cmd$none};
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{page: 'Projects', selected_project: ''}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
 			default:
-				return {ctor: '_Tuple2', _0: 'Xylophone', _1: _elm_lang$core$Platform_Cmd$none};
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selected_project: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
 		}
 	});
-var _user$project$Main$init = {ctor: '_Tuple2', _0: 'Home', _1: _elm_lang$core$Platform_Cmd$none};
-var _user$project$Main$Xylophone = {ctor: 'Xylophone'};
-var _user$project$Main$Connect4 = {ctor: 'Connect4'};
-var _user$project$Main$Wedding = {ctor: 'Wedding'};
-var _user$project$Main$Culturemap = {ctor: 'Culturemap'};
+var _user$project$Main$Model = F2(
+	function (a, b) {
+		return {page: a, selected_project: b};
+	});
+var _user$project$Main$Project = F5(
+	function (a, b, c, d, e) {
+		return {name: a, image_link: b, url: c, description: d, tech: e};
+	});
+var _user$project$Main$Details = function (a) {
+	return {ctor: 'Details', _0: a};
+};
 var _user$project$Main$Projects = {ctor: 'Projects'};
-var _user$project$Main$projectItem = F3(
-	function (model, project, msg) {
+var _user$project$Main$projectItem = F2(
+	function (selected_project, project) {
 		return A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _user$project$Style$contentItemStyle,
+				_0: _user$project$Style$projectItemStyle,
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onMouseEnter(msg),
+					_0: _elm_lang$html$Html_Events$onMouseEnter(
+						_user$project$Main$Details(project.name)),
 					_1: {
 						ctor: '::',
 						_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Main$Projects),
@@ -8726,56 +8767,34 @@ var _user$project$Main$projectItem = F3(
 			},
 			{
 				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$img,
-					{
-						ctor: '::',
-						_0: _user$project$Style$contentImageStyle,
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$src(project.image_link),
-							_1: {ctor: '[]'}
-						}
-					},
-					{ctor: '[]'}),
+				_0: _user$project$Main$projectImage(project),
 				_1: {
 					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$div,
-						{
-							ctor: '::',
-							_0: A2(_user$project$Style$contentDescriptionStyle, model, project.name),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: A3(_user$project$Main$hoverdiv, project.name, project.tech, project.url),
-							_1: {ctor: '[]'}
-						}),
+					_0: A2(_user$project$Main$projectDetails, selected_project, project),
 					_1: {ctor: '[]'}
 				}
 			});
 	});
-var _user$project$Main$projects = function (model) {
+var _user$project$Main$projects = function (selected_project) {
 	return A2(
 		_elm_lang$html$Html$div,
 		{
 			ctor: '::',
-			_0: _user$project$Style$contentParentStyle,
+			_0: _user$project$Style$projectParentStyle,
 			_1: {ctor: '[]'}
 		},
 		{
 			ctor: '::',
-			_0: A3(_user$project$Main$projectItem, model, _user$project$Projects$culturemap, _user$project$Main$Culturemap),
+			_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$culturemap),
 			_1: {
 				ctor: '::',
-				_0: A3(_user$project$Main$projectItem, model, _user$project$Projects$xylophone, _user$project$Main$Xylophone),
+				_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$wedding),
 				_1: {
 					ctor: '::',
-					_0: A3(_user$project$Main$projectItem, model, _user$project$Projects$wedding, _user$project$Main$Wedding),
+					_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$connect4),
 					_1: {
 						ctor: '::',
-						_0: A3(_user$project$Main$projectItem, model, _user$project$Projects$connect4, _user$project$Main$Connect4),
+						_0: A2(_user$project$Main$projectItem, selected_project, _user$project$Projects$xylophone),
 						_1: {ctor: '[]'}
 					}
 				}
@@ -8783,7 +8802,7 @@ var _user$project$Main$projects = function (model) {
 		});
 };
 var _user$project$Main$body = function (model) {
-	return _elm_lang$core$Native_Utils.eq(model, 'Home') ? A2(
+	return _elm_lang$core$Native_Utils.eq(model.page, 'Home') ? A2(
 		_elm_lang$html$Html$div,
 		{
 			ctor: '::',
@@ -8803,7 +8822,7 @@ var _user$project$Main$body = function (model) {
 		},
 		{
 			ctor: '::',
-			_0: _user$project$Main$projects(model),
+			_0: _user$project$Main$projects(model.selected_project),
 			_1: {ctor: '[]'}
 		});
 };

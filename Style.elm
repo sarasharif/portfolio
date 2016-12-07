@@ -2,7 +2,9 @@ module Style exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Debug exposing (..)
+
+
+-- import Debug exposing (..)
 
 
 navStyle : Attribute msg
@@ -72,8 +74,8 @@ profileDescriptionStyle =
         ]
 
 
-contentParentStyle : Attribute msg
-contentParentStyle =
+projectParentStyle : Attribute msg
+projectParentStyle =
     style
         [ ( "display", "flex" )
         , ( "flex-wrap", "wrap" )
@@ -82,8 +84,8 @@ contentParentStyle =
         ]
 
 
-contentItemStyle : Attribute msg
-contentItemStyle =
+projectItemStyle : Attribute msg
+projectItemStyle =
     style
         [ ( "position", "relative" )
         , ( "width", "640px" )
@@ -92,8 +94,8 @@ contentItemStyle =
         ]
 
 
-contentImageStyle : Attribute msg
-contentImageStyle =
+projectImageStyle : Attribute msg
+projectImageStyle =
     style
         [ ( "position", "relative" )
         , ( "width", "640px" )
@@ -102,8 +104,8 @@ contentImageStyle =
         ]
 
 
-contentDescriptionStyle : String -> String -> Attribute msg
-contentDescriptionStyle model match =
+projectDescriptionStyle : String -> String -> Attribute msg
+projectDescriptionStyle model match =
     let
         zindex =
             if model == match then
@@ -118,4 +120,5 @@ contentDescriptionStyle model match =
             , ( "height", "486px" )
             , ( "width", "640px" )
             , ( "z-index", (zindex) )
+            , ( "text-align", "center" )
             ]

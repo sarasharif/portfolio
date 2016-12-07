@@ -22,12 +22,30 @@ main =
 
 
 type alias Model =
-    String
+    { page : String
+    , selected_project : String
+    }
+
+
+type alias Project =
+    { name : String
+    , image_link : String
+    , url : String
+    , description : String
+    , tech : List String
+    }
+
+
+initModel : Model
+initModel =
+    { page = "Home"
+    , selected_project = ""
+    }
 
 
 init : ( Model, Cmd Msg )
 init =
-    ( "Home", Cmd.none )
+    ( initModel, Cmd.none )
 
 
 
@@ -37,32 +55,20 @@ init =
 type Msg
     = Home
     | Projects
-    | Culturemap
-    | Wedding
-    | Connect4
-    | Xylophone
+    | Details String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Home ->
-            ( "Home", Cmd.none )
+            ( initModel, Cmd.none )
 
         Projects ->
-            ( "Projects", Cmd.none )
+            ( { model | page = "Projects", selected_project = "" }, Cmd.none )
 
-        Culturemap ->
-            ( "Culturemap", Cmd.none )
-
-        Wedding ->
-            ( "Wedding", Cmd.none )
-
-        Connect4 ->
-            ( "Connect4", Cmd.none )
-
-        Xylophone ->
-            ( "Xylophone", Cmd.none )
+        Details project_name ->
+            ( { model | selected_project = project_name }, Cmd.none )
 
 
 
@@ -89,12 +95,12 @@ nav =
 
 body : Model -> Html Msg
 body model =
-    if model == "Home" then
+    if model.page == "Home" then
         div [ bodyStyle ]
             [ home ]
     else
         div [ bodyStyle ]
-            [ projects model ]
+            [ projects model.selected_project ]
 
 
 home : Html Msg
@@ -110,30 +116,34 @@ home =
         ]
 
 
-projects : Model -> Html Msg
-projects model =
+projects : String -> Html Msg
+projects selected_project =
     div
-        [ contentParentStyle ]
-        [ projectItem model culturemap Culturemap
-        , projectItem model xylophone Xylophone
-        , projectItem model wedding Wedding
-        , projectItem model connect4 Connect4
+        [ projectParentStyle ]
+        [ projectItem selected_project culturemap
+        , projectItem selected_project wedding
+        , projectItem selected_project connect4
+        , projectItem selected_project xylophone
         ]
 
 
-projectItem : Model -> Project -> Msg -> Html Msg
-projectItem model project msg =
+projectItem : String -> Project -> Html Msg
+projectItem selected_project project =
     div
-        [ contentItemStyle, onMouseEnter msg, onMouseLeave Projects ]
-        [ img [ contentImageStyle, src project.image_link ] []
-        , div [ contentDescriptionStyle model project.name ]
-            [ projectDetails project.name project.tech project.url ]
+        [ projectItemStyle, onMouseEnter (Details project.name), onMouseLeave Projects ]
+        [ projectImage project
+        , projectDetails selected_project project
         ]
 
 
-projectDetails : String -> List String -> String -> Html Msg
-projectDetails name tech url =
-    div []
-        [ h1 [] [ text name ]
-        , a [ target "_blank", href url ] [ text "Check it out!" ]
+projectImage : Project -> Html Msg
+projectImage project =
+    img [ projectImageStyle, src project.image_link ] []
+
+
+projectDetails : String -> Project -> Html Msg
+projectDetails selected_project project =
+    div [ projectDescriptionStyle selected_project project.name ]
+        [ h1 [] [ text project.name ]
+        , a [ buttonStyle, target "_blank", href project.url ] [ text "Check it out!" ]
         ]
