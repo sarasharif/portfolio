@@ -1,9 +1,18 @@
 var _user$project$Update$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
-		if (_p0.ctor === 'Home') {
-			return {ctor: '_Tuple2', _0: 'Home', _1: _elm_lang$core$Platform_Cmd$none};
-		} else {
-			return {ctor: '_Tuple2', _0: 'Projects', _1: _elm_lang$core$Platform_Cmd$none};
+		switch (_p0.ctor) {
+			case 'Home':
+				return {ctor: '_Tuple2', _0: 'Home', _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Projects':
+				return {ctor: '_Tuple2', _0: 'Projects', _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Info_a':
+				return {ctor: '_Tuple2', _0: 'Info_a', _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Info_b':
+				return {ctor: '_Tuple2', _0: 'Info_b', _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Info_c':
+				return {ctor: '_Tuple2', _0: 'Info_c', _1: _elm_lang$core$Platform_Cmd$none};
+			default:
+				return {ctor: '_Tuple2', _0: 'Info_d', _1: _elm_lang$core$Platform_Cmd$none};
 		}
 	});

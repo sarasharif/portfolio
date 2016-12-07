@@ -6,6 +6,7 @@ import Html.Events exposing (..)
 import Model exposing (..)
 import Messages exposing (..)
 import Style exposing (..)
+import Debug exposing (..)
 
 
 view : Model -> Html Msg
@@ -33,13 +34,13 @@ body model =
             [ home ]
     else
         div [ bodyStyle ]
-            [ projects ]
+            [ projects model ]
 
 
 home : Html Msg
 home =
     div []
-        [ div [ contentItemStyle ]
+        [ div [ profileStyle ]
             [ div [ profileDescriptionStyle ]
                 [ h1 [] [ text "Sara Sharif" ]
                 , h2 [] [ text "Engineer" ]
@@ -49,27 +50,36 @@ home =
         ]
 
 
-projects : Html Msg
-projects =
-    div []
+projects : Model -> Html Msg
+projects model =
+    div
+        [ contentParentStyle ]
         [ div
-            [ contentItemStyle ]
-            [ img [ contentImageStyle, src "img/culturemap.png" ] []
-            , div [ contentDescriptionStyle ] [ text "culturemap" ]
+            [ contentItemStyle, onMouseEnter Info_a, onMouseLeave Projects ]
+            [ img [ contentImageStyle, src "img/cm.png" ] []
+            , div [ contentDescriptionStyle model "Info_a" ] [ hoverdiv "culturemap" [ "ruby", "javascript" ] "http://www.culturemap.site" ]
             ]
         , div
-            [ contentItemStyle ]
-            [ img [ contentImageStyle, src "img/xylophone.gif" ] []
-            , div [ contentDescriptionStyle ] [ text "xylophone" ]
+            [ contentItemStyle, onMouseEnter Info_b, onMouseLeave Projects ]
+            [ img [ contentImageStyle, src "img/xy.png" ] []
+            , div [ contentDescriptionStyle model "Info_b" ] [ hoverdiv "xylophone" [ "ruby", "javascript" ] "https://www.google.com" ]
             ]
         , div
-            [ contentItemStyle ]
-            [ img [ contentImageStyle, src "img/wedding.png" ] []
-            , div [ contentDescriptionStyle ] [ text "wedding" ]
+            [ contentItemStyle, onMouseEnter Info_c, onMouseLeave Projects ]
+            [ img [ contentImageStyle, src "img/sm.png" ] []
+            , div [ contentDescriptionStyle model "Info_c" ] [ hoverdiv "culturemap" [ "ruby", "javascript" ] "https://www.google.com" ]
             ]
         , div
-            [ contentItemStyle ]
-            [ img [ contentImageStyle, src "img/connect4.gif" ] []
-            , div [ contentDescriptionStyle ] [ text "connect4" ]
+            [ contentItemStyle, onMouseEnter Info_d, onMouseLeave Projects ]
+            [ img [ contentImageStyle, src "img/c4.png" ] []
+            , div [ contentDescriptionStyle model "Info_d" ] [ hoverdiv "culturemap" [ "ruby", "javascript" ] "https://www.google.com" ]
             ]
+        ]
+
+
+hoverdiv : String -> List String -> String -> Html Msg
+hoverdiv name skills url =
+    div []
+        [ h1 [] [ text name ]
+        , a [ target "_blank", href url ] [ text "Check it out!" ]
         ]

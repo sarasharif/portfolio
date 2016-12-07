@@ -2,6 +2,7 @@ module Style exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Debug exposing (..)
 
 
 navStyle : Attribute msg
@@ -42,8 +43,8 @@ bodyStyle =
         ]
 
 
-contentItemStyle : Attribute msg
-contentItemStyle =
+profileStyle : Attribute msg
+profileStyle =
     style
         [ ( "width", "70vw" )
         , ( "margin", "10px" )
@@ -62,24 +63,59 @@ profileImageStyle =
 profileDescriptionStyle : Attribute msg
 profileDescriptionStyle =
     style
-        [ ( "background-color", "rgba(255,255,255,.7)" )
+        [ ( "background-color", "rgba(255,255,255,.6)" )
         , ( "flex-grow", "4" )
         , ( "vertical-align", "baseline" )
+        , ( "font-size", "2em" )
         , ( "padding", "10% 5%" )
+        , ( "line-height", "30px" )
+        ]
+
+
+contentParentStyle : Attribute msg
+contentParentStyle =
+    style
+        [ ( "display", "flex" )
+        , ( "flex-wrap", "wrap" )
+        , ( "width", "1400px" )
+        , ( "justify-content", "center" )
+        ]
+
+
+contentItemStyle : Attribute msg
+contentItemStyle =
+    style
+        [ ( "position", "relative" )
+        , ( "width", "640px" )
+        , ( "height", "486px" )
+        , ( "margin", "10px" )
         ]
 
 
 contentImageStyle : Attribute msg
 contentImageStyle =
     style
-        [ ( "width", "25vw" )
-        , ( "height", "15vw" )
+        [ ( "position", "relative" )
+        , ( "width", "640px" )
+        , ( "height", "486px" )
+        , ( "z-index", "50" )
         ]
 
 
-contentDescriptionStyle : Attribute msg
-contentDescriptionStyle =
-    style
-        [ ( "background-color", "rgba(255,255,255,.7)" )
-        , ( "flex-grow", "4" )
-        ]
+contentDescriptionStyle : String -> String -> Attribute msg
+contentDescriptionStyle model match =
+    let
+        zindex =
+            if model == match then
+                "100"
+            else
+                "-100"
+    in
+        style
+            [ ( "background-color", "rgba(5,5,5,.7)" )
+            , ( "position", "absolute" )
+            , ( "top", "0px" )
+            , ( "height", "486px" )
+            , ( "width", "640px" )
+            , ( "z-index", (zindex) )
+            ]

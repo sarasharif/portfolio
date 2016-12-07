@@ -1,2 +1,6 @@
+var _user$project$Messages$Info_d = {ctor: 'Info_d'};
+var _user$project$Messages$Info_c = {ctor: 'Info_c'};
+var _user$project$Messages$Info_b = {ctor: 'Info_b'};
+var _user$project$Messages$Info_a = {ctor: 'Info_a'};
 var _user$project$Messages$Projects = {ctor: 'Projects'};
 var _user$project$Messages$Home = {ctor: 'Home'};

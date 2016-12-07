@@ -15,3 +15,15 @@ update msg model =
 
         Projects ->
             ( "Projects", Cmd.none )
+
+        Info_a ->
+            ( "Info_a", Cmd.none )
+
+        Info_b ->
+            ( "Info_b", Cmd.none )
+
+        Info_c ->
+            ( "Info_c", Cmd.none )
+
+        Info_d ->
+            ( "Info_d", Cmd.none )

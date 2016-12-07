@@ -1,54 +1,64 @@
-var _user$project$View$projects = A2(
-	_elm_lang$html$Html$div,
-	{ctor: '[]'},
-	{
-		ctor: '::',
-		_0: A2(
+var _user$project$View$hoverdiv = F3(
+	function (name, skills, url) {
+		return A2(
 			_elm_lang$html$Html$div,
-			{
-				ctor: '::',
-				_0: _user$project$Style$contentItemStyle,
-				_1: {ctor: '[]'}
-			},
+			{ctor: '[]'},
 			{
 				ctor: '::',
 				_0: A2(
-					_elm_lang$html$Html$img,
+					_elm_lang$html$Html$h1,
+					{ctor: '[]'},
 					{
 						ctor: '::',
-						_0: _user$project$Style$contentImageStyle,
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$src('img/culturemap.png'),
-							_1: {ctor: '[]'}
-						}
-					},
-					{ctor: '[]'}),
+						_0: _elm_lang$html$Html$text(name),
+						_1: {ctor: '[]'}
+					}),
 				_1: {
 					ctor: '::',
 					_0: A2(
-						_elm_lang$html$Html$div,
+						_elm_lang$html$Html$a,
 						{
 							ctor: '::',
-							_0: _user$project$Style$contentDescriptionStyle,
-							_1: {ctor: '[]'}
+							_0: _elm_lang$html$Html_Attributes$target('_blank'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$href(url),
+								_1: {ctor: '[]'}
+							}
 						},
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html$text('culturemap'),
+							_0: _elm_lang$html$Html$text('Check it out!'),
 							_1: {ctor: '[]'}
 						}),
 					_1: {ctor: '[]'}
 				}
-			}),
-		_1: {
+			});
+	});
+var _user$project$View$projects = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Style$contentParentStyle,
+			_1: {ctor: '[]'}
+		},
+		{
 			ctor: '::',
 			_0: A2(
 				_elm_lang$html$Html$div,
 				{
 					ctor: '::',
 					_0: _user$project$Style$contentItemStyle,
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onMouseEnter(_user$project$Messages$Info_a),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Messages$Projects),
+							_1: {ctor: '[]'}
+						}
+					}
 				},
 				{
 					ctor: '::',
@@ -59,7 +69,7 @@ var _user$project$View$projects = A2(
 							_0: _user$project$Style$contentImageStyle,
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$src('img/xylophone.gif'),
+								_0: _elm_lang$html$Html_Attributes$src('img/cm.png'),
 								_1: {ctor: '[]'}
 							}
 						},
@@ -70,12 +80,24 @@ var _user$project$View$projects = A2(
 							_elm_lang$html$Html$div,
 							{
 								ctor: '::',
-								_0: _user$project$Style$contentDescriptionStyle,
+								_0: A2(_user$project$Style$contentDescriptionStyle, model, 'Info_a'),
 								_1: {ctor: '[]'}
 							},
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('xylophone'),
+								_0: A3(
+									_user$project$View$hoverdiv,
+									'culturemap',
+									{
+										ctor: '::',
+										_0: 'ruby',
+										_1: {
+											ctor: '::',
+											_0: 'javascript',
+											_1: {ctor: '[]'}
+										}
+									},
+									'http://www.culturemap.site'),
 								_1: {ctor: '[]'}
 							}),
 						_1: {ctor: '[]'}
@@ -88,7 +110,15 @@ var _user$project$View$projects = A2(
 					{
 						ctor: '::',
 						_0: _user$project$Style$contentItemStyle,
-						_1: {ctor: '[]'}
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Events$onMouseEnter(_user$project$Messages$Info_b),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Messages$Projects),
+								_1: {ctor: '[]'}
+							}
+						}
 					},
 					{
 						ctor: '::',
@@ -99,7 +129,7 @@ var _user$project$View$projects = A2(
 								_0: _user$project$Style$contentImageStyle,
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$src('img/wedding.png'),
+									_0: _elm_lang$html$Html_Attributes$src('img/xy.png'),
 									_1: {ctor: '[]'}
 								}
 							},
@@ -110,12 +140,24 @@ var _user$project$View$projects = A2(
 								_elm_lang$html$Html$div,
 								{
 									ctor: '::',
-									_0: _user$project$Style$contentDescriptionStyle,
+									_0: A2(_user$project$Style$contentDescriptionStyle, model, 'Info_b'),
 									_1: {ctor: '[]'}
 								},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('wedding'),
+									_0: A3(
+										_user$project$View$hoverdiv,
+										'xylophone',
+										{
+											ctor: '::',
+											_0: 'ruby',
+											_1: {
+												ctor: '::',
+												_0: 'javascript',
+												_1: {ctor: '[]'}
+											}
+										},
+										'https://www.google.com'),
 									_1: {ctor: '[]'}
 								}),
 							_1: {ctor: '[]'}
@@ -128,7 +170,15 @@ var _user$project$View$projects = A2(
 						{
 							ctor: '::',
 							_0: _user$project$Style$contentItemStyle,
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onMouseEnter(_user$project$Messages$Info_c),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Messages$Projects),
+									_1: {ctor: '[]'}
+								}
+							}
 						},
 						{
 							ctor: '::',
@@ -139,7 +189,7 @@ var _user$project$View$projects = A2(
 									_0: _user$project$Style$contentImageStyle,
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$src('img/connect4.gif'),
+										_0: _elm_lang$html$Html_Attributes$src('img/sm.png'),
 										_1: {ctor: '[]'}
 									}
 								},
@@ -150,22 +200,95 @@ var _user$project$View$projects = A2(
 									_elm_lang$html$Html$div,
 									{
 										ctor: '::',
-										_0: _user$project$Style$contentDescriptionStyle,
+										_0: A2(_user$project$Style$contentDescriptionStyle, model, 'Info_c'),
 										_1: {ctor: '[]'}
 									},
 									{
 										ctor: '::',
-										_0: _elm_lang$html$Html$text('connect4'),
+										_0: A3(
+											_user$project$View$hoverdiv,
+											'culturemap',
+											{
+												ctor: '::',
+												_0: 'ruby',
+												_1: {
+													ctor: '::',
+													_0: 'javascript',
+													_1: {ctor: '[]'}
+												}
+											},
+											'https://www.google.com'),
 										_1: {ctor: '[]'}
 									}),
 								_1: {ctor: '[]'}
 							}
 						}),
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _user$project$Style$contentItemStyle,
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onMouseEnter(_user$project$Messages$Info_d),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Messages$Projects),
+										_1: {ctor: '[]'}
+									}
+								}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$img,
+									{
+										ctor: '::',
+										_0: _user$project$Style$contentImageStyle,
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$src('img/c4.png'),
+											_1: {ctor: '[]'}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$div,
+										{
+											ctor: '::',
+											_0: A2(_user$project$Style$contentDescriptionStyle, model, 'Info_d'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: A3(
+												_user$project$View$hoverdiv,
+												'culturemap',
+												{
+													ctor: '::',
+													_0: 'ruby',
+													_1: {
+														ctor: '::',
+														_0: 'javascript',
+														_1: {ctor: '[]'}
+													}
+												},
+												'https://www.google.com'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
-		}
-	});
+		});
+};
 var _user$project$View$home = A2(
 	_elm_lang$html$Html$div,
 	{ctor: '[]'},
@@ -175,7 +298,7 @@ var _user$project$View$home = A2(
 			_elm_lang$html$Html$div,
 			{
 				ctor: '::',
-				_0: _user$project$Style$contentItemStyle,
+				_0: _user$project$Style$profileStyle,
 				_1: {ctor: '[]'}
 			},
 			{
@@ -250,7 +373,7 @@ var _user$project$View$body = function (model) {
 		},
 		{
 			ctor: '::',
-			_0: _user$project$View$projects,
+			_0: _user$project$View$projects(model),
 			_1: {ctor: '[]'}
 		});
 };
