@@ -4,7 +4,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Style exposing (..)
-import Projects exposing (..)
+import Details exposing (..)
 
 
 main : Program Never Model Msg
@@ -46,7 +46,7 @@ init =
 type Msg
     = Home
     | Projects
-    | Details String
+    | Hover String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -58,7 +58,7 @@ update msg model =
         Projects ->
             ( { model | page = "Projects", selected_project = "" }, Cmd.none )
 
-        Details project_name ->
+        Hover project_name ->
             ( { model | selected_project = project_name }, Cmd.none )
 
 
@@ -69,18 +69,18 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ nav
+        [ nav model.page
         , body model
         ]
 
 
-nav : Html Msg
-nav =
+nav : String -> Html Msg
+nav current_page =
     div [ navStyle ]
-        [ button [ buttonStyle, onClick Home, class "fa fa-home fa-5x" ] []
-        , button [ buttonStyle, onClick Projects, class "fa fa-folder fa-5x" ] []
-        , a [ buttonStyle, target "_blank", href "https://github.com/sarasharif", class "fa fa-github fa-5x" ] []
-        , a [ buttonStyle, target "_blank", href "https://www.linkedin.com/in/sarsharif", class "fa fa-linkedin fa-5x" ] []
+        [ button [ buttonStyle current_page "Home", onClick Home, class "fa fa-home fa-5x" ] []
+        , button [ buttonStyle current_page "Projects", onClick Projects, class "fa fa-folder fa-5x" ] []
+        , a [ buttonStyle current_page "github", target "_blank", href "https://github.com/sarasharif", class "fa fa-github fa-5x" ] []
+        , a [ buttonStyle current_page "linkedin", target "_blank", href "https://www.linkedin.com/in/sarsharif", class "fa fa-linkedin fa-5x" ] []
         ]
 
 
@@ -99,11 +99,10 @@ home =
     div []
         [ div [ profileStyle ]
             [ div [ profileDescriptionStyle ]
-                [ h2 [] [ text "Sara" ]
-                , h1 [] [ text "Sharif" ]
-                , h2 [] [ text "Engineer" ]
+                [ h2 [] [ text Details.name ]
+                , h4 [] [ text occupation ]
                 ]
-            , img [ profileImageStyle, src "img/sara.jpg" ] []
+            , img [ profileImageStyle, src profile_picture ] []
             ]
         ]
 
@@ -122,7 +121,7 @@ projects selected_project =
 projectItem : String -> Project -> Html Msg
 projectItem selected_project project =
     div
-        [ projectItemStyle, onMouseEnter (Details project.name), onMouseLeave Projects ]
+        [ projectItemStyle, onMouseEnter (Hover project.name), onMouseLeave Projects ]
         [ projectImage project
         , projectDetails selected_project project
         ]
@@ -137,5 +136,5 @@ projectDetails : String -> Project -> Html Msg
 projectDetails selected_project project =
     div [ projectDescriptionStyle selected_project project.name ]
         [ h1 [] [ text project.name ]
-        , a [ buttonStyle, target "_blank", href project.url ] [ text "Check it out!" ]
+        , a [ goButtonStyle, target "_blank", href project.url ] [ text "Check it out!" ]
         ]

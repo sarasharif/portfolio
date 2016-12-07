@@ -1,4 +1,4 @@
-var _user$project$Projects$xylophone = {
+var _user$project$Custom_Data$xylophone = {
 	name: 'Xylophone',
 	image_link: 'img/xy.png',
 	url: 'http://xylophone.herokuapp.com',
@@ -17,7 +17,7 @@ var _user$project$Projects$xylophone = {
 		}
 	}
 };
-var _user$project$Projects$connect4 = {
+var _user$project$Custom_Data$connect4 = {
 	name: 'Connect4',
 	image_link: 'img/c4.png',
 	url: 'http://sarasharif.github.io/connect4',
@@ -36,7 +36,7 @@ var _user$project$Projects$connect4 = {
 		}
 	}
 };
-var _user$project$Projects$wedding = {
+var _user$project$Custom_Data$wedding = {
 	name: 'Wedding',
 	image_link: 'img/sm.png',
 	url: 'http://otherwedding.herokuapp.com',
@@ -59,7 +59,7 @@ var _user$project$Projects$wedding = {
 		}
 	}
 };
-var _user$project$Projects$culturemap = {
+var _user$project$Custom_Data$culturemap = {
 	name: 'Culturemap',
 	image_link: 'img/cm.png',
 	url: 'http://culturemap.site',
@@ -78,28 +78,28 @@ var _user$project$Projects$culturemap = {
 		}
 	}
 };
-var _user$project$Projects$my_projects = {
+var _user$project$Custom_Data$my_projects = {
 	ctor: '::',
-	_0: _user$project$Projects$culturemap,
+	_0: _user$project$Custom_Data$culturemap,
 	_1: {
 		ctor: '::',
-		_0: _user$project$Projects$connect4,
+		_0: _user$project$Custom_Data$connect4,
 		_1: {
 			ctor: '::',
-			_0: _user$project$Projects$wedding,
+			_0: _user$project$Custom_Data$wedding,
 			_1: {
 				ctor: '::',
-				_0: _user$project$Projects$xylophone,
+				_0: _user$project$Custom_Data$xylophone,
 				_1: {ctor: '[]'}
 			}
 		}
 	}
 };
-var _user$project$Projects$profile_picture = 'img/sara.jpg';
-var _user$project$Projects$occupation = 'Engineer';
-var _user$project$Projects$last_name = 'Sharif';
-var _user$project$Projects$first_name = 'Sara';
-var _user$project$Projects$Project = F5(
+var _user$project$Custom_Data$profile_picture = 'img/sara.jpg';
+var _user$project$Custom_Data$occupation = 'Engineer';
+var _user$project$Custom_Data$last_name = 'Sharif';
+var _user$project$Custom_Data$first_name = 'Sara';
+var _user$project$Custom_Data$Project = F5(
 	function (a, b, c, d, e) {
 		return {name: a, image_link: b, url: c, description: d, tech: e};
 	});

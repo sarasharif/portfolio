@@ -23,7 +23,7 @@ var _user$project$Main$projectDetails = F2(
 						_elm_lang$html$Html$a,
 						{
 							ctor: '::',
-							_0: _user$project$Style$buttonStyle,
+							_0: _user$project$Style$goButtonStyle,
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$html$Html_Attributes$target('_blank'),
@@ -85,31 +85,20 @@ var _user$project$Main$home = A2(
 							{ctor: '[]'},
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('Sara'),
+								_0: _elm_lang$html$Html$text(_user$project$Details$name),
 								_1: {ctor: '[]'}
 							}),
 						_1: {
 							ctor: '::',
 							_0: A2(
-								_elm_lang$html$Html$h1,
+								_elm_lang$html$Html$h4,
 								{ctor: '[]'},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('Sharif'),
+									_0: _elm_lang$html$Html$text(_user$project$Details$occupation),
 									_1: {ctor: '[]'}
 								}),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$h2,
-									{ctor: '[]'},
-									{
-										ctor: '::',
-										_0: _elm_lang$html$Html$text('Engineer'),
-										_1: {ctor: '[]'}
-									}),
-								_1: {ctor: '[]'}
-							}
+							_1: {ctor: '[]'}
 						}
 					}),
 				_1: {
@@ -121,7 +110,7 @@ var _user$project$Main$home = A2(
 							_0: _user$project$Style$profileImageStyle,
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$src('img/sara.jpg'),
+								_0: _elm_lang$html$Html_Attributes$src(_user$project$Details$profile_picture),
 								_1: {ctor: '[]'}
 							}
 						},
@@ -161,8 +150,8 @@ var _user$project$Main$Model = F2(
 	function (a, b) {
 		return {page: a, selected_project: b};
 	});
-var _user$project$Main$Details = function (a) {
-	return {ctor: 'Details', _0: a};
+var _user$project$Main$Hover = function (a) {
+	return {ctor: 'Hover', _0: a};
 };
 var _user$project$Main$Projects = {ctor: 'Projects'};
 var _user$project$Main$projectItem = F2(
@@ -175,7 +164,7 @@ var _user$project$Main$projectItem = F2(
 				_1: {
 					ctor: '::',
 					_0: _elm_lang$html$Html_Events$onMouseEnter(
-						_user$project$Main$Details(project.name)),
+						_user$project$Main$Hover(project.name)),
 					_1: {
 						ctor: '::',
 						_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Main$Projects),
@@ -199,7 +188,7 @@ var _user$project$Main$projects = function (selected_project) {
 		function (project) {
 			return A2(_user$project$Main$projectItem, selected_project, project);
 		},
-		_user$project$Projects$my_projects);
+		_user$project$Details$my_projects);
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -235,44 +224,27 @@ var _user$project$Main$body = function (model) {
 		});
 };
 var _user$project$Main$Home = {ctor: 'Home'};
-var _user$project$Main$nav = A2(
-	_elm_lang$html$Html$div,
-	{
-		ctor: '::',
-		_0: _user$project$Style$navStyle,
-		_1: {ctor: '[]'}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$button,
-			{
-				ctor: '::',
-				_0: _user$project$Style$buttonStyle,
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Home),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('fa fa-home fa-5x'),
-						_1: {ctor: '[]'}
-					}
-				}
-			},
-			{ctor: '[]'}),
-		_1: {
+var _user$project$Main$nav = function (current_page) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Style$navStyle,
+			_1: {ctor: '[]'}
+		},
+		{
 			ctor: '::',
 			_0: A2(
 				_elm_lang$html$Html$button,
 				{
 					ctor: '::',
-					_0: _user$project$Style$buttonStyle,
+					_0: A2(_user$project$Style$buttonStyle, current_page, 'Home'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Projects),
+						_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Home),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('fa fa-folder fa-5x'),
+							_0: _elm_lang$html$Html_Attributes$class('fa fa-home fa-5x'),
 							_1: {ctor: '[]'}
 						}
 					}
@@ -281,21 +253,17 @@ var _user$project$Main$nav = A2(
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_elm_lang$html$Html$a,
+					_elm_lang$html$Html$button,
 					{
 						ctor: '::',
-						_0: _user$project$Style$buttonStyle,
+						_0: A2(_user$project$Style$buttonStyle, current_page, 'Projects'),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$target('_blank'),
+							_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Projects),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$href('https://github.com/sarasharif'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('fa fa-github fa-5x'),
-									_1: {ctor: '[]'}
-								}
+								_0: _elm_lang$html$Html_Attributes$class('fa fa-folder fa-5x'),
+								_1: {ctor: '[]'}
 							}
 						}
 					},
@@ -306,34 +274,57 @@ var _user$project$Main$nav = A2(
 						_elm_lang$html$Html$a,
 						{
 							ctor: '::',
-							_0: _user$project$Style$buttonStyle,
+							_0: A2(_user$project$Style$buttonStyle, current_page, 'github'),
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$html$Html_Attributes$target('_blank'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$href('https://www.linkedin.com/in/sarsharif'),
+									_0: _elm_lang$html$Html_Attributes$href('https://github.com/sarasharif'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$class('fa fa-linkedin fa-5x'),
+										_0: _elm_lang$html$Html_Attributes$class('fa fa-github fa-5x'),
 										_1: {ctor: '[]'}
 									}
 								}
 							}
 						},
 						{ctor: '[]'}),
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$a,
+							{
+								ctor: '::',
+								_0: A2(_user$project$Style$buttonStyle, current_page, 'linkedin'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$target('_blank'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$href('https://www.linkedin.com/in/sarsharif'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('fa fa-linkedin fa-5x'),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
-		}
-	});
+		});
+};
 var _user$project$Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		{ctor: '[]'},
 		{
 			ctor: '::',
-			_0: _user$project$Main$nav,
+			_0: _user$project$Main$nav(model.page),
 			_1: {
 				ctor: '::',
 				_0: _user$project$Main$body(model),

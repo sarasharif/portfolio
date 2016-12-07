@@ -1,9 +1,9 @@
-var _user$project$Projects$xylophone = {
+var _user$project$Details$xylophone = {
 	name: 'Xylophone',
 	image_link: 'img/xy.png',
 	url: 'http://xylophone.herokuapp.com',
 	description: 'a xylophone and a harmonica had a baby',
-	tech: {
+	tech_stack: {
 		ctor: '::',
 		_0: 'rails',
 		_1: {
@@ -17,12 +17,12 @@ var _user$project$Projects$xylophone = {
 		}
 	}
 };
-var _user$project$Projects$connect4 = {
+var _user$project$Details$connect4 = {
 	name: 'Connect4',
 	image_link: 'img/c4.png',
 	url: 'http://sarasharif.github.io/connect4',
-	description: 'this is a game',
-	tech: {
+	description: 'the classic kid\'s game',
+	tech_stack: {
 		ctor: '::',
 		_0: 'javascript',
 		_1: {
@@ -36,12 +36,12 @@ var _user$project$Projects$connect4 = {
 		}
 	}
 };
-var _user$project$Projects$wedding = {
+var _user$project$Details$wedding = {
 	name: 'Wedding',
 	image_link: 'img/sm.png',
 	url: 'http://otherwedding.herokuapp.com',
 	description: 'a wedding website with RSVPs',
-	tech: {
+	tech_stack: {
 		ctor: '::',
 		_0: 'mondodb',
 		_1: {
@@ -49,22 +49,22 @@ var _user$project$Projects$wedding = {
 			_0: 'express',
 			_1: {
 				ctor: '::',
-				_0: 'angular.js',
+				_0: 'angular',
 				_1: {
 					ctor: '::',
-					_0: 'node.js',
+					_0: 'node',
 					_1: {ctor: '[]'}
 				}
 			}
 		}
 	}
 };
-var _user$project$Projects$culturemap = {
+var _user$project$Details$culturemap = {
 	name: 'Culturemap',
 	image_link: 'img/cm.png',
 	url: 'http://culturemap.site',
 	description: 'this is a game',
-	tech: {
+	tech_stack: {
 		ctor: '::',
 		_0: 'rails',
 		_1: {
@@ -78,28 +78,27 @@ var _user$project$Projects$culturemap = {
 		}
 	}
 };
-var _user$project$Projects$my_projects = {
+var _user$project$Details$my_projects = {
 	ctor: '::',
-	_0: _user$project$Projects$culturemap,
+	_0: _user$project$Details$culturemap,
 	_1: {
 		ctor: '::',
-		_0: _user$project$Projects$connect4,
+		_0: _user$project$Details$connect4,
 		_1: {
 			ctor: '::',
-			_0: _user$project$Projects$wedding,
+			_0: _user$project$Details$xylophone,
 			_1: {
 				ctor: '::',
-				_0: _user$project$Projects$xylophone,
+				_0: _user$project$Details$wedding,
 				_1: {ctor: '[]'}
 			}
 		}
 	}
 };
-var _user$project$Projects$profile_picture = 'img/sara.jpg';
-var _user$project$Projects$occupation = 'Engineer';
-var _user$project$Projects$last_name = 'Sharif';
-var _user$project$Projects$first_name = 'Sara';
-var _user$project$Projects$Project = F5(
+var _user$project$Details$profile_picture = 'img/sara.jpg';
+var _user$project$Details$occupation = 'Software Engineer';
+var _user$project$Details$name = 'Sara Sharif';
+var _user$project$Details$Project = F5(
 	function (a, b, c, d, e) {
-		return {name: a, image_link: b, url: c, description: d, tech: e};
+		return {name: a, image_link: b, url: c, description: d, tech_stack: e};
 	});

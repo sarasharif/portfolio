@@ -8256,32 +8256,179 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
+var _user$project$Details$xylophone = {
+	name: 'Xylophone',
+	image_link: 'img/xy.png',
+	url: 'http://xylophone.herokuapp.com',
+	description: 'a xylophone and a harmonica had a baby',
+	tech_stack: {
+		ctor: '::',
+		_0: 'rails',
+		_1: {
+			ctor: '::',
+			_0: 'react',
+			_1: {
+				ctor: '::',
+				_0: 'flux',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Details$connect4 = {
+	name: 'Connect4',
+	image_link: 'img/c4.png',
+	url: 'http://sarasharif.github.io/connect4',
+	description: 'the classic kid\'s game',
+	tech_stack: {
+		ctor: '::',
+		_0: 'javascript',
+		_1: {
+			ctor: '::',
+			_0: 'jquery',
+			_1: {
+				ctor: '::',
+				_0: 'minimax',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Details$wedding = {
+	name: 'Wedding',
+	image_link: 'img/sm.png',
+	url: 'http://otherwedding.herokuapp.com',
+	description: 'a wedding website with RSVPs',
+	tech_stack: {
+		ctor: '::',
+		_0: 'mondodb',
+		_1: {
+			ctor: '::',
+			_0: 'express',
+			_1: {
+				ctor: '::',
+				_0: 'angular',
+				_1: {
+					ctor: '::',
+					_0: 'node',
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	}
+};
+var _user$project$Details$culturemap = {
+	name: 'Culturemap',
+	image_link: 'img/cm.png',
+	url: 'http://culturemap.site',
+	description: 'this is a game',
+	tech_stack: {
+		ctor: '::',
+		_0: 'rails',
+		_1: {
+			ctor: '::',
+			_0: 'react',
+			_1: {
+				ctor: '::',
+				_0: 'flux',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Details$my_projects = {
+	ctor: '::',
+	_0: _user$project$Details$culturemap,
+	_1: {
+		ctor: '::',
+		_0: _user$project$Details$connect4,
+		_1: {
+			ctor: '::',
+			_0: _user$project$Details$xylophone,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Details$wedding,
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Details$profile_picture = 'img/sara.jpg';
+var _user$project$Details$occupation = 'Software Engineer';
+var _user$project$Details$name = 'Sara Sharif';
+var _user$project$Details$Project = F5(
+	function (a, b, c, d, e) {
+		return {name: a, image_link: b, url: c, description: d, tech_stack: e};
+	});
+
+var _user$project$Style$goButtonStyle = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
+			_1: {
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'border', _1: '10px solid white'},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'border-radius', _1: '50px'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'padding', _1: '20px'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'text-decoration', _1: 'none'},
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	});
 var _user$project$Style$projectDescriptionStyle = F2(
 	function (model, match) {
 		var zindex = _elm_lang$core$Native_Utils.eq(model, match) ? '100' : '-100';
 		return _elm_lang$html$Html_Attributes$style(
 			{
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'rgba(5,5,5,.7)'},
+				_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'position', _1: 'absolute'},
+					_0: {ctor: '_Tuple2', _0: 'flex-direction', _1: 'column'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'top', _1: '0px'},
+						_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'space-around'},
 						_1: {
 							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+							_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'rgba(5,5,5,.7)'},
 							_1: {
 								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'height', _1: '100%'},
+								_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
 								_1: {
 									ctor: '::',
-									_0: {ctor: '_Tuple2', _0: 'z-index', _1: zindex},
+									_0: {ctor: '_Tuple2', _0: 'position', _1: 'absolute'},
 									_1: {
 										ctor: '::',
-										_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
-										_1: {ctor: '[]'}
+										_0: {ctor: '_Tuple2', _0: 'top', _1: '0px'},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'height', _1: '100%'},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'z-index', _1: zindex},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
 									}
 								}
 							}
@@ -8338,16 +8485,16 @@ var _user$project$Style$profileDescriptionStyle = _elm_lang$html$Html_Attributes
 		_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'rgba(255,255,255,.6)'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'flex-grow', _1: '4'},
+			_0: {ctor: '_Tuple2', _0: 'max-height', _1: '50vh'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'mid-width', _1: '30vw'},
+				_0: {ctor: '_Tuple2', _0: 'flex-grow', _1: '4'},
 				_1: {
 					ctor: '::',
 					_0: {ctor: '_Tuple2', _0: 'vertical-align', _1: 'baseline'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'font-size', _1: '2em'},
+						_0: {ctor: '_Tuple2', _0: 'font-size', _1: '3em'},
 						_1: {
 							ctor: '::',
 							_0: {ctor: '_Tuple2', _0: 'padding', _1: '10% 5%'},
@@ -8384,7 +8531,11 @@ var _user$project$Style$profileStyle = _elm_lang$html$Html_Attributes$style(
 					_1: {
 						ctor: '::',
 						_0: {ctor: '_Tuple2', _0: 'width', _1: '60vw'},
-						_1: {ctor: '[]'}
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+							_1: {ctor: '[]'}
+						}
 					}
 				}
 			}
@@ -8406,49 +8557,65 @@ var _user$project$Style$bodyStyle = _elm_lang$html$Html_Attributes$style(
 					_1: {
 						ctor: '::',
 						_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
-						_1: {ctor: '[]'}
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'font-family', _1: '\'Helvetica Neue\', sans-serif'},
+							_1: {ctor: '[]'}
+						}
 					}
 				}
 			}
 		}
 	});
-var _user$project$Style$buttonStyle = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
-		_1: {
-			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'height', _1: '90px'},
-			_1: {
+var _user$project$Style$buttonStyle = F2(
+	function (current_page, button_icon) {
+		var color = _elm_lang$core$Native_Utils.eq(current_page, button_icon) ? 'darkgray' : 'white';
+		return _elm_lang$html$Html_Attributes$style(
+			{
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'width', _1: '90px'},
+				_0: {ctor: '_Tuple2', _0: 'color', _1: color},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'border', _1: 'none'},
+					_0: {ctor: '_Tuple2', _0: 'height', _1: '90px'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'margin', _1: '4px 20px'},
+						_0: {ctor: '_Tuple2', _0: 'width', _1: '90px'},
 						_1: {
 							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'padding', _1: '0'},
+							_0: {ctor: '_Tuple2', _0: 'border', _1: 'none'},
 							_1: {
 								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'background', _1: 'none'},
+								_0: {ctor: '_Tuple2', _0: 'margin', _1: '4px 20px'},
 								_1: {
 									ctor: '::',
-									_0: {ctor: '_Tuple2', _0: 'text-decoration', _1: 'none'},
+									_0: {ctor: '_Tuple2', _0: 'padding', _1: '0'},
 									_1: {
 										ctor: '::',
-										_0: {ctor: '_Tuple2', _0: 'cursor', _1: 'pointer'},
-										_1: {ctor: '[]'}
+										_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'background', _1: 'none'},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'outline', _1: 'none'},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'text-decoration', _1: 'none'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'cursor', _1: 'pointer'},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
 									}
 								}
 							}
 						}
 					}
 				}
-			}
-		}
+			});
 	});
 var _user$project$Style$navStyle = _elm_lang$html$Html_Attributes$style(
 	{
@@ -8465,7 +8632,7 @@ var _user$project$Style$navStyle = _elm_lang$html$Html_Attributes$style(
 					_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+						_0: {ctor: '_Tuple2', _0: 'width', _1: '100vw'},
 						_1: {
 							ctor: '::',
 							_0: {ctor: '_Tuple2', _0: 'margin-bottom', _1: '15px'},
@@ -8475,108 +8642,6 @@ var _user$project$Style$navStyle = _elm_lang$html$Html_Attributes$style(
 				}
 			}
 		}
-	});
-
-var _user$project$Projects$xylophone = {
-	name: 'Xylophone',
-	image_link: 'img/xy.png',
-	url: 'http://xylophone.herokuapp.com',
-	description: 'a xylophone and a harmonica had a baby',
-	tech: {
-		ctor: '::',
-		_0: 'rails',
-		_1: {
-			ctor: '::',
-			_0: 'react',
-			_1: {
-				ctor: '::',
-				_0: 'flux',
-				_1: {ctor: '[]'}
-			}
-		}
-	}
-};
-var _user$project$Projects$connect4 = {
-	name: 'Connect4',
-	image_link: 'img/c4.png',
-	url: 'http://sarasharif.github.io/connect4',
-	description: 'this is a game',
-	tech: {
-		ctor: '::',
-		_0: 'javascript',
-		_1: {
-			ctor: '::',
-			_0: 'jquery',
-			_1: {
-				ctor: '::',
-				_0: 'minimax',
-				_1: {ctor: '[]'}
-			}
-		}
-	}
-};
-var _user$project$Projects$wedding = {
-	name: 'Wedding',
-	image_link: 'img/sm.png',
-	url: 'http://otherwedding.herokuapp.com',
-	description: 'a wedding website with RSVPs',
-	tech: {
-		ctor: '::',
-		_0: 'mondodb',
-		_1: {
-			ctor: '::',
-			_0: 'express',
-			_1: {
-				ctor: '::',
-				_0: 'angular.js',
-				_1: {
-					ctor: '::',
-					_0: 'node.js',
-					_1: {ctor: '[]'}
-				}
-			}
-		}
-	}
-};
-var _user$project$Projects$culturemap = {
-	name: 'Culturemap',
-	image_link: 'img/cm.png',
-	url: 'http://culturemap.site',
-	description: 'this is a game',
-	tech: {
-		ctor: '::',
-		_0: 'rails',
-		_1: {
-			ctor: '::',
-			_0: 'react',
-			_1: {
-				ctor: '::',
-				_0: 'flux',
-				_1: {ctor: '[]'}
-			}
-		}
-	}
-};
-var _user$project$Projects$my_projects = {
-	ctor: '::',
-	_0: _user$project$Projects$culturemap,
-	_1: {
-		ctor: '::',
-		_0: _user$project$Projects$connect4,
-		_1: {
-			ctor: '::',
-			_0: _user$project$Projects$wedding,
-			_1: {
-				ctor: '::',
-				_0: _user$project$Projects$xylophone,
-				_1: {ctor: '[]'}
-			}
-		}
-	}
-};
-var _user$project$Projects$Project = F5(
-	function (a, b, c, d, e) {
-		return {name: a, image_link: b, url: c, description: d, tech: e};
 	});
 
 var _user$project$Main$projectDetails = F2(
@@ -8604,7 +8669,7 @@ var _user$project$Main$projectDetails = F2(
 						_elm_lang$html$Html$a,
 						{
 							ctor: '::',
-							_0: _user$project$Style$buttonStyle,
+							_0: _user$project$Style$goButtonStyle,
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$html$Html_Attributes$target('_blank'),
@@ -8666,31 +8731,20 @@ var _user$project$Main$home = A2(
 							{ctor: '[]'},
 							{
 								ctor: '::',
-								_0: _elm_lang$html$Html$text('Sara'),
+								_0: _elm_lang$html$Html$text(_user$project$Details$name),
 								_1: {ctor: '[]'}
 							}),
 						_1: {
 							ctor: '::',
 							_0: A2(
-								_elm_lang$html$Html$h1,
+								_elm_lang$html$Html$h4,
 								{ctor: '[]'},
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html$text('Sharif'),
+									_0: _elm_lang$html$Html$text(_user$project$Details$occupation),
 									_1: {ctor: '[]'}
 								}),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$h2,
-									{ctor: '[]'},
-									{
-										ctor: '::',
-										_0: _elm_lang$html$Html$text('Engineer'),
-										_1: {ctor: '[]'}
-									}),
-								_1: {ctor: '[]'}
-							}
+							_1: {ctor: '[]'}
 						}
 					}),
 				_1: {
@@ -8702,7 +8756,7 @@ var _user$project$Main$home = A2(
 							_0: _user$project$Style$profileImageStyle,
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$src('img/sara.jpg'),
+								_0: _elm_lang$html$Html_Attributes$src(_user$project$Details$profile_picture),
 								_1: {ctor: '[]'}
 							}
 						},
@@ -8742,8 +8796,8 @@ var _user$project$Main$Model = F2(
 	function (a, b) {
 		return {page: a, selected_project: b};
 	});
-var _user$project$Main$Details = function (a) {
-	return {ctor: 'Details', _0: a};
+var _user$project$Main$Hover = function (a) {
+	return {ctor: 'Hover', _0: a};
 };
 var _user$project$Main$Projects = {ctor: 'Projects'};
 var _user$project$Main$projectItem = F2(
@@ -8756,7 +8810,7 @@ var _user$project$Main$projectItem = F2(
 				_1: {
 					ctor: '::',
 					_0: _elm_lang$html$Html_Events$onMouseEnter(
-						_user$project$Main$Details(project.name)),
+						_user$project$Main$Hover(project.name)),
 					_1: {
 						ctor: '::',
 						_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Main$Projects),
@@ -8780,7 +8834,7 @@ var _user$project$Main$projects = function (selected_project) {
 		function (project) {
 			return A2(_user$project$Main$projectItem, selected_project, project);
 		},
-		_user$project$Projects$my_projects);
+		_user$project$Details$my_projects);
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -8816,44 +8870,27 @@ var _user$project$Main$body = function (model) {
 		});
 };
 var _user$project$Main$Home = {ctor: 'Home'};
-var _user$project$Main$nav = A2(
-	_elm_lang$html$Html$div,
-	{
-		ctor: '::',
-		_0: _user$project$Style$navStyle,
-		_1: {ctor: '[]'}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$button,
-			{
-				ctor: '::',
-				_0: _user$project$Style$buttonStyle,
-				_1: {
-					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Home),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('fa fa-home fa-5x'),
-						_1: {ctor: '[]'}
-					}
-				}
-			},
-			{ctor: '[]'}),
-		_1: {
+var _user$project$Main$nav = function (current_page) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Style$navStyle,
+			_1: {ctor: '[]'}
+		},
+		{
 			ctor: '::',
 			_0: A2(
 				_elm_lang$html$Html$button,
 				{
 					ctor: '::',
-					_0: _user$project$Style$buttonStyle,
+					_0: A2(_user$project$Style$buttonStyle, current_page, 'Home'),
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Projects),
+						_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Home),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class('fa fa-folder fa-5x'),
+							_0: _elm_lang$html$Html_Attributes$class('fa fa-home fa-5x'),
 							_1: {ctor: '[]'}
 						}
 					}
@@ -8862,21 +8899,17 @@ var _user$project$Main$nav = A2(
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_elm_lang$html$Html$a,
+					_elm_lang$html$Html$button,
 					{
 						ctor: '::',
-						_0: _user$project$Style$buttonStyle,
+						_0: A2(_user$project$Style$buttonStyle, current_page, 'Projects'),
 						_1: {
 							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$target('_blank'),
+							_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Projects),
 							_1: {
 								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$href('https://github.com/sarasharif'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('fa fa-github fa-5x'),
-									_1: {ctor: '[]'}
-								}
+								_0: _elm_lang$html$Html_Attributes$class('fa fa-folder fa-5x'),
+								_1: {ctor: '[]'}
 							}
 						}
 					},
@@ -8887,34 +8920,57 @@ var _user$project$Main$nav = A2(
 						_elm_lang$html$Html$a,
 						{
 							ctor: '::',
-							_0: _user$project$Style$buttonStyle,
+							_0: A2(_user$project$Style$buttonStyle, current_page, 'github'),
 							_1: {
 								ctor: '::',
 								_0: _elm_lang$html$Html_Attributes$target('_blank'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$href('https://www.linkedin.com/in/sarsharif'),
+									_0: _elm_lang$html$Html_Attributes$href('https://github.com/sarasharif'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$class('fa fa-linkedin fa-5x'),
+										_0: _elm_lang$html$Html_Attributes$class('fa fa-github fa-5x'),
 										_1: {ctor: '[]'}
 									}
 								}
 							}
 						},
 						{ctor: '[]'}),
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$a,
+							{
+								ctor: '::',
+								_0: A2(_user$project$Style$buttonStyle, current_page, 'linkedin'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$target('_blank'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$href('https://www.linkedin.com/in/sarsharif'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('fa fa-linkedin fa-5x'),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
-		}
-	});
+		});
+};
 var _user$project$Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		{ctor: '[]'},
 		{
 			ctor: '::',
-			_0: _user$project$Main$nav,
+			_0: _user$project$Main$nav(model.page),
 			_1: {
 				ctor: '::',
 				_0: _user$project$Main$body(model),

@@ -4,9 +4,6 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 
 
--- import Debug exposing (..)
-
-
 navStyle : Attribute msg
 navStyle =
     style
@@ -14,24 +11,33 @@ navStyle =
         , ( "top", "10vh" )
         , ( "display", "flex" )
         , ( "justify-content", "center" )
-        , ( "width", "100%" )
+        , ( "width", "100vw" )
         , ( "margin-bottom", "15px" )
         ]
 
 
-buttonStyle : Attribute msg
-buttonStyle =
-    style
-        [ ( "color", "white" )
-        , ( "height", "90px" )
-        , ( "width", "90px" )
-        , ( "border", "none" )
-        , ( "margin", "4px 20px" )
-        , ( "padding", "0" )
-        , ( "background", "none" )
-        , ( "text-decoration", "none" )
-        , ( "cursor", "pointer" )
-        ]
+buttonStyle : String -> String -> Attribute msg
+buttonStyle current_page button_icon =
+    let
+        color =
+            if current_page == button_icon then
+                "darkgray"
+            else
+                "white"
+    in
+        style
+            [ ( "color", color )
+            , ( "height", "90px" )
+            , ( "width", "90px" )
+            , ( "border", "none" )
+            , ( "margin", "4px 20px" )
+            , ( "padding", "0" )
+            , ( "text-align", "center" )
+            , ( "background", "none" )
+            , ( "outline", "none" )
+            , ( "text-decoration", "none" )
+            , ( "cursor", "pointer" )
+            ]
 
 
 bodyStyle : Attribute msg
@@ -42,6 +48,7 @@ bodyStyle =
         , ( "width", "100%" )
         , ( "display", "flex" )
         , ( "justify-content", "center" )
+        , ( "font-family", "'Helvetica Neue', sans-serif" )
         ]
 
 
@@ -53,6 +60,7 @@ profileStyle =
         , ( "display", "flex" )
         , ( "flex-direction", "row" )
         , ( "width", "60vw" )
+        , ( "justify-content", "center" )
         ]
 
 
@@ -66,10 +74,10 @@ profileDescriptionStyle : Attribute msg
 profileDescriptionStyle =
     style
         [ ( "background-color", "rgba(255,255,255,.6)" )
+        , ( "max-height", "50vh" )
         , ( "flex-grow", "4" )
-        , ( "mid-width", "30vw" )
         , ( "vertical-align", "baseline" )
-        , ( "font-size", "2em" )
+        , ( "font-size", "3em" )
         , ( "padding", "10% 5%" )
         , ( "line-height", "30px" )
         ]
@@ -112,7 +120,11 @@ projectDescriptionStyle model match =
                 "-100"
     in
         style
-            [ ( "background-color", "rgba(5,5,5,.7)" )
+            [ ( "display", "flex" )
+            , ( "flex-direction", "column" )
+            , ( "justify-content", "space-around" )
+            , ( "background-color", "rgba(5,5,5,.7)" )
+            , ( "color", "white" )
             , ( "position", "absolute" )
             , ( "top", "0px" )
             , ( "width", "100%" )
@@ -120,3 +132,15 @@ projectDescriptionStyle model match =
             , ( "z-index", (zindex) )
             , ( "text-align", "center" )
             ]
+
+
+goButtonStyle : Attribute msg
+goButtonStyle =
+    style
+        [ ( "display", "flex" )
+        , ( "color", "white" )
+        , ( "border", "10px solid white" )
+        , ( "border-radius", "50px" )
+        , ( "padding", "20px" )
+        , ( "text-decoration", "none" )
+        ]

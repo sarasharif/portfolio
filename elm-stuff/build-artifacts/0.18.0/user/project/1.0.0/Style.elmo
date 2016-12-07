@@ -1,29 +1,71 @@
+var _user$project$Style$goButtonStyle = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
+			_1: {
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'border', _1: '10px solid white'},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'border-radius', _1: '50px'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'padding', _1: '20px'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'text-decoration', _1: 'none'},
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	});
 var _user$project$Style$projectDescriptionStyle = F2(
 	function (model, match) {
 		var zindex = _elm_lang$core$Native_Utils.eq(model, match) ? '100' : '-100';
 		return _elm_lang$html$Html_Attributes$style(
 			{
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'rgba(5,5,5,.7)'},
+				_0: {ctor: '_Tuple2', _0: 'display', _1: 'flex'},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'position', _1: 'absolute'},
+					_0: {ctor: '_Tuple2', _0: 'flex-direction', _1: 'column'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'top', _1: '0px'},
+						_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'space-around'},
 						_1: {
 							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+							_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'rgba(5,5,5,.7)'},
 							_1: {
 								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'height', _1: '100%'},
+								_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
 								_1: {
 									ctor: '::',
-									_0: {ctor: '_Tuple2', _0: 'z-index', _1: zindex},
+									_0: {ctor: '_Tuple2', _0: 'position', _1: 'absolute'},
 									_1: {
 										ctor: '::',
-										_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
-										_1: {ctor: '[]'}
+										_0: {ctor: '_Tuple2', _0: 'top', _1: '0px'},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'height', _1: '100%'},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'z-index', _1: zindex},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
 									}
 								}
 							}
@@ -80,16 +122,16 @@ var _user$project$Style$profileDescriptionStyle = _elm_lang$html$Html_Attributes
 		_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'rgba(255,255,255,.6)'},
 		_1: {
 			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'flex-grow', _1: '4'},
+			_0: {ctor: '_Tuple2', _0: 'max-height', _1: '50vh'},
 			_1: {
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'mid-width', _1: '30vw'},
+				_0: {ctor: '_Tuple2', _0: 'flex-grow', _1: '4'},
 				_1: {
 					ctor: '::',
 					_0: {ctor: '_Tuple2', _0: 'vertical-align', _1: 'baseline'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'font-size', _1: '2em'},
+						_0: {ctor: '_Tuple2', _0: 'font-size', _1: '3em'},
 						_1: {
 							ctor: '::',
 							_0: {ctor: '_Tuple2', _0: 'padding', _1: '10% 5%'},
@@ -126,7 +168,11 @@ var _user$project$Style$profileStyle = _elm_lang$html$Html_Attributes$style(
 					_1: {
 						ctor: '::',
 						_0: {ctor: '_Tuple2', _0: 'width', _1: '60vw'},
-						_1: {ctor: '[]'}
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
+							_1: {ctor: '[]'}
+						}
 					}
 				}
 			}
@@ -148,49 +194,65 @@ var _user$project$Style$bodyStyle = _elm_lang$html$Html_Attributes$style(
 					_1: {
 						ctor: '::',
 						_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
-						_1: {ctor: '[]'}
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'font-family', _1: '\'Helvetica Neue\', sans-serif'},
+							_1: {ctor: '[]'}
+						}
 					}
 				}
 			}
 		}
 	});
-var _user$project$Style$buttonStyle = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
-		_1: {
-			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: 'height', _1: '90px'},
-			_1: {
+var _user$project$Style$buttonStyle = F2(
+	function (current_page, button_icon) {
+		var color = _elm_lang$core$Native_Utils.eq(current_page, button_icon) ? 'darkgray' : 'white';
+		return _elm_lang$html$Html_Attributes$style(
+			{
 				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: 'width', _1: '90px'},
+				_0: {ctor: '_Tuple2', _0: 'color', _1: color},
 				_1: {
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'border', _1: 'none'},
+					_0: {ctor: '_Tuple2', _0: 'height', _1: '90px'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'margin', _1: '4px 20px'},
+						_0: {ctor: '_Tuple2', _0: 'width', _1: '90px'},
 						_1: {
 							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'padding', _1: '0'},
+							_0: {ctor: '_Tuple2', _0: 'border', _1: 'none'},
 							_1: {
 								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'background', _1: 'none'},
+								_0: {ctor: '_Tuple2', _0: 'margin', _1: '4px 20px'},
 								_1: {
 									ctor: '::',
-									_0: {ctor: '_Tuple2', _0: 'text-decoration', _1: 'none'},
+									_0: {ctor: '_Tuple2', _0: 'padding', _1: '0'},
 									_1: {
 										ctor: '::',
-										_0: {ctor: '_Tuple2', _0: 'cursor', _1: 'pointer'},
-										_1: {ctor: '[]'}
+										_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'background', _1: 'none'},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'outline', _1: 'none'},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'text-decoration', _1: 'none'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'cursor', _1: 'pointer'},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
 									}
 								}
 							}
 						}
 					}
 				}
-			}
-		}
+			});
 	});
 var _user$project$Style$navStyle = _elm_lang$html$Html_Attributes$style(
 	{
@@ -207,7 +269,7 @@ var _user$project$Style$navStyle = _elm_lang$html$Html_Attributes$style(
 					_0: {ctor: '_Tuple2', _0: 'justify-content', _1: 'center'},
 					_1: {
 						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: 'width', _1: '100%'},
+						_0: {ctor: '_Tuple2', _0: 'width', _1: '100vw'},
 						_1: {
 							ctor: '::',
 							_0: {ctor: '_Tuple2', _0: 'margin-bottom', _1: '15px'},
