@@ -8256,15 +8256,6 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
-var _user$project$Messages$Info_d = {ctor: 'Info_d'};
-var _user$project$Messages$Info_c = {ctor: 'Info_c'};
-var _user$project$Messages$Info_b = {ctor: 'Info_b'};
-var _user$project$Messages$Info_a = {ctor: 'Info_a'};
-var _user$project$Messages$Projects = {ctor: 'Projects'};
-var _user$project$Messages$Home = {ctor: 'Home'};
-
-var _user$project$Model$init = {ctor: '_Tuple2', _0: 'Home', _1: _elm_lang$core$Platform_Cmd$none};
-
 var _user$project$Style$contentDescriptionStyle = F2(
 	function (model, match) {
 		var zindex = _elm_lang$core$Native_Utils.eq(model, match) ? '100' : '-100';
@@ -8490,7 +8481,109 @@ var _user$project$Style$navStyle = _elm_lang$html$Html_Attributes$style(
 		}
 	});
 
-var _user$project$View$hoverdiv = F3(
+var _user$project$Projects$xylophone = {
+	name: 'Xylophone',
+	image_link: 'img/xy.png',
+	url: 'http://xylophone.herokuapp.com',
+	description: 'a xylophone and a harmonica had a baby',
+	tech: {
+		ctor: '::',
+		_0: 'rails',
+		_1: {
+			ctor: '::',
+			_0: 'react',
+			_1: {
+				ctor: '::',
+				_0: 'flux',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Projects$connect4 = {
+	name: 'Connect4',
+	image_link: 'img/c4.png',
+	url: 'http://sarasharif.github.io/connect4',
+	description: 'this is a game',
+	tech: {
+		ctor: '::',
+		_0: 'javascript',
+		_1: {
+			ctor: '::',
+			_0: 'jquery',
+			_1: {
+				ctor: '::',
+				_0: 'minimax',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Projects$wedding = {
+	name: 'Wedding',
+	image_link: 'img/sm.png',
+	url: 'http://otherwedding.herokuapp.com',
+	description: 'a wedding website with RSVPs',
+	tech: {
+		ctor: '::',
+		_0: 'mondodb',
+		_1: {
+			ctor: '::',
+			_0: 'express',
+			_1: {
+				ctor: '::',
+				_0: 'angular.js',
+				_1: {
+					ctor: '::',
+					_0: 'node.js',
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	}
+};
+var _user$project$Projects$culturemap = {
+	name: 'Culturemap',
+	image_link: 'img/cm.png',
+	url: 'http://culturemap.site',
+	description: 'this is a game',
+	tech: {
+		ctor: '::',
+		_0: 'rails',
+		_1: {
+			ctor: '::',
+			_0: 'react',
+			_1: {
+				ctor: '::',
+				_0: 'flux',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Projects$projects = {
+	ctor: '::',
+	_0: _user$project$Projects$culturemap,
+	_1: {
+		ctor: '::',
+		_0: _user$project$Projects$connect4,
+		_1: {
+			ctor: '::',
+			_0: _user$project$Projects$wedding,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Projects$xylophone,
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Projects$Project = F5(
+	function (a, b, c, d, e) {
+		return {name: a, image_link: b, url: c, description: d, tech: e};
+	});
+
+var _user$project$Main$hoverdiv = F3(
 	function (name, skills, url) {
 		return A2(
 			_elm_lang$html$Html$div,
@@ -8527,261 +8620,7 @@ var _user$project$View$hoverdiv = F3(
 				}
 			});
 	});
-var _user$project$View$projects = function (model) {
-	return A2(
-		_elm_lang$html$Html$div,
-		{
-			ctor: '::',
-			_0: _user$project$Style$contentParentStyle,
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$div,
-				{
-					ctor: '::',
-					_0: _user$project$Style$contentItemStyle,
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Events$onMouseEnter(_user$project$Messages$Info_a),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Messages$Projects),
-							_1: {ctor: '[]'}
-						}
-					}
-				},
-				{
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$img,
-						{
-							ctor: '::',
-							_0: _user$project$Style$contentImageStyle,
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$src('img/cm.png'),
-								_1: {ctor: '[]'}
-							}
-						},
-						{ctor: '[]'}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$div,
-							{
-								ctor: '::',
-								_0: A2(_user$project$Style$contentDescriptionStyle, model, 'Info_a'),
-								_1: {ctor: '[]'}
-							},
-							{
-								ctor: '::',
-								_0: A3(
-									_user$project$View$hoverdiv,
-									'culturemap',
-									{
-										ctor: '::',
-										_0: 'ruby',
-										_1: {
-											ctor: '::',
-											_0: 'javascript',
-											_1: {ctor: '[]'}
-										}
-									},
-									'http://www.culturemap.site'),
-								_1: {ctor: '[]'}
-							}),
-						_1: {ctor: '[]'}
-					}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$div,
-					{
-						ctor: '::',
-						_0: _user$project$Style$contentItemStyle,
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Events$onMouseEnter(_user$project$Messages$Info_b),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Messages$Projects),
-								_1: {ctor: '[]'}
-							}
-						}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$img,
-							{
-								ctor: '::',
-								_0: _user$project$Style$contentImageStyle,
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$src('img/xy.png'),
-									_1: {ctor: '[]'}
-								}
-							},
-							{ctor: '[]'}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$div,
-								{
-									ctor: '::',
-									_0: A2(_user$project$Style$contentDescriptionStyle, model, 'Info_b'),
-									_1: {ctor: '[]'}
-								},
-								{
-									ctor: '::',
-									_0: A3(
-										_user$project$View$hoverdiv,
-										'xylophone',
-										{
-											ctor: '::',
-											_0: 'ruby',
-											_1: {
-												ctor: '::',
-												_0: 'javascript',
-												_1: {ctor: '[]'}
-											}
-										},
-										'https://www.google.com'),
-									_1: {ctor: '[]'}
-								}),
-							_1: {ctor: '[]'}
-						}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$div,
-						{
-							ctor: '::',
-							_0: _user$project$Style$contentItemStyle,
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$html$Html_Events$onMouseEnter(_user$project$Messages$Info_c),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Messages$Projects),
-									_1: {ctor: '[]'}
-								}
-							}
-						},
-						{
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$img,
-								{
-									ctor: '::',
-									_0: _user$project$Style$contentImageStyle,
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Attributes$src('img/sm.png'),
-										_1: {ctor: '[]'}
-									}
-								},
-								{ctor: '[]'}),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$div,
-									{
-										ctor: '::',
-										_0: A2(_user$project$Style$contentDescriptionStyle, model, 'Info_c'),
-										_1: {ctor: '[]'}
-									},
-									{
-										ctor: '::',
-										_0: A3(
-											_user$project$View$hoverdiv,
-											'culturemap',
-											{
-												ctor: '::',
-												_0: 'ruby',
-												_1: {
-													ctor: '::',
-													_0: 'javascript',
-													_1: {ctor: '[]'}
-												}
-											},
-											'https://www.google.com'),
-										_1: {ctor: '[]'}
-									}),
-								_1: {ctor: '[]'}
-							}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$div,
-							{
-								ctor: '::',
-								_0: _user$project$Style$contentItemStyle,
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$html$Html_Events$onMouseEnter(_user$project$Messages$Info_d),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Messages$Projects),
-										_1: {ctor: '[]'}
-									}
-								}
-							},
-							{
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$img,
-									{
-										ctor: '::',
-										_0: _user$project$Style$contentImageStyle,
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$src('img/c4.png'),
-											_1: {ctor: '[]'}
-										}
-									},
-									{ctor: '[]'}),
-								_1: {
-									ctor: '::',
-									_0: A2(
-										_elm_lang$html$Html$div,
-										{
-											ctor: '::',
-											_0: A2(_user$project$Style$contentDescriptionStyle, model, 'Info_d'),
-											_1: {ctor: '[]'}
-										},
-										{
-											ctor: '::',
-											_0: A3(
-												_user$project$View$hoverdiv,
-												'culturemap',
-												{
-													ctor: '::',
-													_0: 'ruby',
-													_1: {
-														ctor: '::',
-														_0: 'javascript',
-														_1: {ctor: '[]'}
-													}
-												},
-												'https://www.google.com'),
-											_1: {ctor: '[]'}
-										}),
-									_1: {ctor: '[]'}
-								}
-							}),
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		});
-};
-var _user$project$View$home = A2(
+var _user$project$Main$home = A2(
 	_elm_lang$html$Html$div,
 	{ctor: '[]'},
 	{
@@ -8844,7 +8683,106 @@ var _user$project$View$home = A2(
 			}),
 		_1: {ctor: '[]'}
 	});
-var _user$project$View$body = function (model) {
+var _user$project$Main$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'Home':
+				return {ctor: '_Tuple2', _0: 'Home', _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Projects':
+				return {ctor: '_Tuple2', _0: 'Projects', _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Culturemap':
+				return {ctor: '_Tuple2', _0: 'Culturemap', _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Wedding':
+				return {ctor: '_Tuple2', _0: 'Wedding', _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Connect4':
+				return {ctor: '_Tuple2', _0: 'Connect4', _1: _elm_lang$core$Platform_Cmd$none};
+			default:
+				return {ctor: '_Tuple2', _0: 'Xylophone', _1: _elm_lang$core$Platform_Cmd$none};
+		}
+	});
+var _user$project$Main$init = {ctor: '_Tuple2', _0: 'Home', _1: _elm_lang$core$Platform_Cmd$none};
+var _user$project$Main$Xylophone = {ctor: 'Xylophone'};
+var _user$project$Main$Connect4 = {ctor: 'Connect4'};
+var _user$project$Main$Wedding = {ctor: 'Wedding'};
+var _user$project$Main$Culturemap = {ctor: 'Culturemap'};
+var _user$project$Main$Projects = {ctor: 'Projects'};
+var _user$project$Main$projectItem = F3(
+	function (model, project, msg) {
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _user$project$Style$contentItemStyle,
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Events$onMouseEnter(msg),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onMouseLeave(_user$project$Main$Projects),
+						_1: {ctor: '[]'}
+					}
+				}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$img,
+					{
+						ctor: '::',
+						_0: _user$project$Style$contentImageStyle,
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$src(project.image_link),
+							_1: {ctor: '[]'}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: A2(_user$project$Style$contentDescriptionStyle, model, project.name),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: A3(_user$project$Main$hoverdiv, project.name, project.tech, project.url),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			});
+	});
+var _user$project$Main$projects = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Style$contentParentStyle,
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A3(_user$project$Main$projectItem, model, _user$project$Projects$culturemap, _user$project$Main$Culturemap),
+			_1: {
+				ctor: '::',
+				_0: A3(_user$project$Main$projectItem, model, _user$project$Projects$xylophone, _user$project$Main$Xylophone),
+				_1: {
+					ctor: '::',
+					_0: A3(_user$project$Main$projectItem, model, _user$project$Projects$wedding, _user$project$Main$Wedding),
+					_1: {
+						ctor: '::',
+						_0: A3(_user$project$Main$projectItem, model, _user$project$Projects$connect4, _user$project$Main$Connect4),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _user$project$Main$body = function (model) {
 	return _elm_lang$core$Native_Utils.eq(model, 'Home') ? A2(
 		_elm_lang$html$Html$div,
 		{
@@ -8854,7 +8792,7 @@ var _user$project$View$body = function (model) {
 		},
 		{
 			ctor: '::',
-			_0: _user$project$View$home,
+			_0: _user$project$Main$home,
 			_1: {ctor: '[]'}
 		}) : A2(
 		_elm_lang$html$Html$div,
@@ -8865,11 +8803,12 @@ var _user$project$View$body = function (model) {
 		},
 		{
 			ctor: '::',
-			_0: _user$project$View$projects(model),
+			_0: _user$project$Main$projects(model),
 			_1: {ctor: '[]'}
 		});
 };
-var _user$project$View$nav = A2(
+var _user$project$Main$Home = {ctor: 'Home'};
+var _user$project$Main$nav = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
@@ -8885,7 +8824,7 @@ var _user$project$View$nav = A2(
 				_0: _user$project$Style$buttonStyle,
 				_1: {
 					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onClick(_user$project$Messages$Home),
+					_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Home),
 					_1: {
 						ctor: '::',
 						_0: _elm_lang$html$Html_Attributes$class('fa fa-home fa-5x'),
@@ -8903,7 +8842,7 @@ var _user$project$View$nav = A2(
 					_0: _user$project$Style$buttonStyle,
 					_1: {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Events$onClick(_user$project$Messages$Projects),
+						_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$Projects),
 						_1: {
 							ctor: '::',
 							_0: _elm_lang$html$Html_Attributes$class('fa fa-folder fa-5x'),
@@ -8961,45 +8900,29 @@ var _user$project$View$nav = A2(
 			}
 		}
 	});
-var _user$project$View$view = function (model) {
+var _user$project$Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		{ctor: '[]'},
 		{
 			ctor: '::',
-			_0: _user$project$View$nav,
+			_0: _user$project$Main$nav,
 			_1: {
 				ctor: '::',
-				_0: _user$project$View$body(model),
+				_0: _user$project$Main$body(model),
 				_1: {ctor: '[]'}
 			}
 		});
 };
-
-var _user$project$Update$update = F2(
-	function (msg, model) {
-		var _p0 = msg;
-		switch (_p0.ctor) {
-			case 'Home':
-				return {ctor: '_Tuple2', _0: 'Home', _1: _elm_lang$core$Platform_Cmd$none};
-			case 'Projects':
-				return {ctor: '_Tuple2', _0: 'Projects', _1: _elm_lang$core$Platform_Cmd$none};
-			case 'Info_a':
-				return {ctor: '_Tuple2', _0: 'Info_a', _1: _elm_lang$core$Platform_Cmd$none};
-			case 'Info_b':
-				return {ctor: '_Tuple2', _0: 'Info_b', _1: _elm_lang$core$Platform_Cmd$none};
-			case 'Info_c':
-				return {ctor: '_Tuple2', _0: 'Info_c', _1: _elm_lang$core$Platform_Cmd$none};
-			default:
-				return {ctor: '_Tuple2', _0: 'Info_d', _1: _elm_lang$core$Platform_Cmd$none};
-		}
-	});
-
-var _user$project$Main$subscriptions = function (model) {
-	return _elm_lang$core$Platform_Sub$none;
-};
 var _user$project$Main$main = _elm_lang$html$Html$program(
-	{init: _user$project$Model$init, view: _user$project$View$view, update: _user$project$Update$update, subscriptions: _user$project$Main$subscriptions})();
+	{
+		init: _user$project$Main$init,
+		view: _user$project$Main$view,
+		update: _user$project$Main$update,
+		subscriptions: function (_p1) {
+			return _elm_lang$core$Platform_Sub$none;
+		}
+	})();
 
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};

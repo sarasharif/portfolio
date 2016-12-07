@@ -1,0 +1,101 @@
+var _user$project$Projects$xylophone = {
+	name: 'Xylophone',
+	image_link: 'img/xy.png',
+	url: 'http://xylophone.herokuapp.com',
+	description: 'a xylophone and a harmonica had a baby',
+	tech: {
+		ctor: '::',
+		_0: 'rails',
+		_1: {
+			ctor: '::',
+			_0: 'react',
+			_1: {
+				ctor: '::',
+				_0: 'flux',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Projects$connect4 = {
+	name: 'Connect4',
+	image_link: 'img/c4.png',
+	url: 'http://sarasharif.github.io/connect4',
+	description: 'this is a game',
+	tech: {
+		ctor: '::',
+		_0: 'javascript',
+		_1: {
+			ctor: '::',
+			_0: 'jquery',
+			_1: {
+				ctor: '::',
+				_0: 'minimax',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Projects$wedding = {
+	name: 'Wedding',
+	image_link: 'img/sm.png',
+	url: 'http://otherwedding.herokuapp.com',
+	description: 'a wedding website with RSVPs',
+	tech: {
+		ctor: '::',
+		_0: 'mondodb',
+		_1: {
+			ctor: '::',
+			_0: 'express',
+			_1: {
+				ctor: '::',
+				_0: 'angular.js',
+				_1: {
+					ctor: '::',
+					_0: 'node.js',
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	}
+};
+var _user$project$Projects$culturemap = {
+	name: 'Culturemap',
+	image_link: 'img/cm.png',
+	url: 'http://culturemap.site',
+	description: 'this is a game',
+	tech: {
+		ctor: '::',
+		_0: 'rails',
+		_1: {
+			ctor: '::',
+			_0: 'react',
+			_1: {
+				ctor: '::',
+				_0: 'flux',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Projects$projects = {
+	ctor: '::',
+	_0: _user$project$Projects$culturemap,
+	_1: {
+		ctor: '::',
+		_0: _user$project$Projects$connect4,
+		_1: {
+			ctor: '::',
+			_0: _user$project$Projects$wedding,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Projects$xylophone,
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Projects$Project = F5(
+	function (a, b, c, d, e) {
+		return {name: a, image_link: b, url: c, description: d, tech: e};
+	});
